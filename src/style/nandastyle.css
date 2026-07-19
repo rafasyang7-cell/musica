@@ -1,0 +1,246 @@
+/* ================= NANDASTYLE.CSS - GLOBAL NANDA ================= */
+
+/* ================= GOOGLE FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ================= VARIÁVEIS GLOBAIS NANDA ================= */
+:root {
+    --font-titles: "Special Gothic Expanded One", sans-serif;
+    --font-text: 'Lora', serif;
+
+    /* Paleta Tsunami (Dark & Vibrant) */
+    --bg-nanda: #0a0a0a;
+    /* Fundo Onyx */
+    --bg-nanda-light: #161616;
+    /* Cards e Seções */
+    --color-light: #ffffff;
+    /* Branco Puro */
+    --color-gray: #b0b0b0;
+    /* Cinza para textos secundários */
+    --accent-color: #ff3366;
+    /* Rosa Tsunami (Marca Registrada) */
+    --accent-glow: rgba(255, 51, 102, 0.3);
+
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-nanda);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+
+/* ================= BODY ================= */
+body {
+    background-color: var(--bg-nanda);
+    color: var(--color-light);
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ================= TIPOGRAFIA ================= */
+h1,
+h2,
+h3,
+.menu-title,
+.card-item-title,
+.section-title {
+    font-family: var(--font-titles);
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-transform: lowercase;
+}
+
+.nota {
+    font-family: var(--font-titles);
+    background-color: var(--accent-color) !important;
+    color: #fff !important;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: inline-block;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+p,
+.critica-texto,
+.description,
+.critico-nome,
+.card-item-description {
+    font-family: var(--font-text);
+    letter-spacing: 0.3px;
+}
+
+/* ================= ESTRUTURA DE SEÇÕES ================= */
+section {
+    width: 100%;
+    padding: 100px 10%;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--accent-color);
+    margin: 0 auto 70px auto;
+    font-style: italic;
+    max-width: 700px;
+}
+
+/* ================= BOTÃO / SELETOR DE ÁLBUNS (BOLINHAS) ================= */
+.album-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-default {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding: 10px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font-titles);
+}
+
+.btn-default:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(255, 51, 102, 0.05);
+}
+
+.active-album {
+    background-color: var(--accent-color) !important;
+    color: #fff !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+/* ================= CARDS CONCEITO & CRÍTICA ================= */
+.menu-item,
+.critica-card {
+    background-color: var(--bg-nanda-light);
+    border-radius: 30px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item:hover,
+.critica-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 51, 102, 0.12);
+    border-color: rgba(255, 51, 102, 0.3);
+}
+
+/* ================= RODAPÉ (FOOTER CENTRALIZADO) ================= */
+#footer {
+    background-color: #050505;
+    padding: 80px 10% 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.footer-content {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-family: var(--font-titles);
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: lowercase;
+}
+
+.footer-brand i {
+    color: var(--accent-color);
+}
+
+.footer-text {
+    color: var(--color-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-socials a {
+    color: var(--color-gray);
+    font-size: 1.5rem;
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: #444;
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-copyright strong {
+    color: var(--color-gray);
+}

@@ -1,0 +1,341 @@
+/* pabllostyle.css */
+
+/* ================= GOOGLE FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&family=Syne:wght@700;800&display=swap');
+
+/* ================= VARIÁVEIS - BATIDÃO TROPICAL VOL. 2 ================= */
+:root {
+    --font-titles: "Syne", sans-serif;
+    --font-body: "Plus Jakarta Sans", sans-serif;
+
+    /* Paleta extraída diretamente da capa:
+       fundo escuro quente, vermelho dominante, amarelo dourado como contraste */
+    --bg-pabllo: #0f0300;
+    --bg-cards: #1c0800;
+
+    --accent-pabllo: #ff2200;
+    /* Vermelho da tipografia "BATIDÃO" */
+    --accent-secondary: #ffc200;
+    /* Amarelo do "tropical" e "VOL.2" */
+    --accent-glow: rgba(255, 34, 0, 0.22);
+
+    --text-light: #fff8f0;
+    --color-gray: #d4a890;
+    /* Bege quente — tom da pele da capa */
+
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 15px;
+    scroll-behavior: auto !important;
+}
+
+body {
+    background-color: var(--bg-pabllo);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 140px 10% 80px 10%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ================= TÍTULOS ================= */
+.section-title {
+    font-family: var(--font-titles);
+    font-weight: 800;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: var(--text-light);
+    margin-bottom: 15px;
+    text-transform: lowercase;
+    letter-spacing: -1px;
+}
+
+/* ícone decorativo antes do título de seção */
+
+
+.section-subtitle {
+    text-align: center;
+    color: var(--accent-secondary);
+    margin-bottom: 70px;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* ================= BOTÕES ================= */
+.btn-default {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 1px solid rgba(255, 34, 0, 0.3);
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: lowercase;
+}
+
+.btn-default:hover {
+    background-color: var(--accent-pabllo) !important;
+    color: #0f0300 !important;
+    border-color: var(--accent-pabllo) !important;
+    box-shadow: 0 5px 18px var(--accent-glow);
+}
+
+.album-switch .btn-default {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.active-album {
+    background-color: var(--accent-pabllo) !important;
+    color: #0f0300 !important;
+    border-color: var(--accent-pabllo) !important;
+    box-shadow: 0 0 22px rgba(255, 34, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* ================= CONCEITO / CARDS ================= */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.menu-item {
+    background-color: var(--bg-cards);
+    border-radius: 30px;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 34, 0, 0.07);
+    transition: var(--transition-smooth);
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-pabllo);
+    box-shadow: 0 20px 45px rgba(255, 34, 0, 0.15);
+}
+
+.menu-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent-pabllo);
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(255, 34, 0, 0.2);
+}
+
+.card-item-title {
+    font-family: var(--font-titles);
+    font-weight: 700;
+    color: var(--accent-secondary);
+    margin-bottom: 15px;
+    text-transform: lowercase;
+    font-size: 1.3rem;
+}
+
+/* ================= CRÍTICAS ================= */
+.critica-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.critica-card {
+    background-color: var(--bg-cards);
+    padding: 35px;
+    border-radius: 24px;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 34, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.critica-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-pabllo);
+    box-shadow: 0 15px 40px rgba(255, 34, 0, 0.12);
+}
+
+.critica-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.critica-logo {
+    max-width: 120px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.nota {
+    font-weight: 700;
+    color: var(--accent-secondary);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.critica-texto {
+    font-size: 0.95rem;
+    color: var(--color-gray);
+    line-height: 1.75;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+
+/* ================= RODAPÉ ================= */
+#footer {
+    position: relative;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(255, 34, 0, 0.12), transparent 55%),
+        radial-gradient(ellipse at 85% 100%, rgba(255, 194, 0, 0.07), transparent 55%),
+        #080100;
+    padding: 70px 10%;
+    border-top: 1px solid rgba(255, 34, 0, 0.18);
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-titles);
+    font-weight: 700;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    text-transform: lowercase;
+}
+
+/* ícone do sol com brilho vermelho */
+.footer-brand i {
+    color: var(--accent-pabllo);
+    filter: drop-shadow(0 0 10px rgba(255, 34, 0, 0.6));
+}
+
+.footer-text {
+    color: var(--color-gray);
+    font-size: 1rem;
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+.footer-text em {
+    display: block;
+    color: var(--accent-secondary);
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+/* ================= REDES SOCIAIS ================= */
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--color-gray);
+    font-size: 1.2rem;
+    border: 1px solid rgba(255, 34, 0, 0.25);
+    background: rgba(255, 34, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    color: #0f0300;
+    background: var(--accent-pabllo);
+    border-color: var(--accent-pabllo);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(255, 34, 0, 0.4);
+}
+
+/* LinkedIn fica amarelo no hover */
+.footer-socials a:nth-child(2):hover {
+    background: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+    box-shadow: 0 8px 22px rgba(255, 194, 0, 0.35);
+    color: #0f0300;
+}
+
+.footer-copyright {
+    width: 100%;
+    font-size: 0.8rem;
+    color: rgba(255, 248, 240, 0.22);
+    border-top: 1px solid rgba(255, 34, 0, 0.1);
+    padding-top: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-copyright strong {
+    color: var(--accent-secondary);
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+    section {
+        padding: 100px 6% 60px 6%;
+    }
+}

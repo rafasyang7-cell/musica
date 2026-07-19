@@ -1,0 +1,366 @@
+/* capahome.css — tema claro */
+
+/* ================= CONTAINER DE NOTAS ================= */
+#notes_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Nota individual — o tamanho e posição são definidos via JS.
+   Notas caindo são o elemento assinatura da capa — mantidas sempre. */
+.falling-note {
+    position: absolute;
+    top: -80px;
+    pointer-events: none;
+    font-style: normal;
+    line-height: 1;
+    user-select: none;
+    animation: fallNote linear forwards;
+    will-change: transform, opacity;
+    opacity: 0.55;
+}
+
+/* Paleta quente (terracota / âmbar / oliva / rosa-poeira), coerente
+   com o tom claro do resto do site — trocada da paleta neon anterior. */
+@keyframes fallNote {
+    0% {
+        transform: translateY(0) rotate(-15deg) scale(0.8);
+        opacity: 0;
+        color: #c1602c;
+    }
+
+    8% {
+        opacity: 0.55;
+    }
+
+    35% {
+        color: #b08a3f;
+        transform: translateY(35vh) rotate(5deg) scale(1);
+    }
+
+    65% {
+        color: #3a7a6d;
+        transform: translateY(65vh) rotate(-8deg) scale(1);
+    }
+
+    92% {
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(20deg) scale(0.9);
+        opacity: 0;
+        color: #c97fa0;
+    }
+}
+
+/* ================= MAIN ================= */
+#capa-main {
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= HERO ================= */
+#hero_capa {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 130px 10% 80px;
+    text-align: center;
+    position: relative;
+}
+
+/* Brilho de fundo sutil */
+#hero_capa::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(193, 96, 44, 0.09) 0%, transparent 65%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    max-width: 780px;
+}
+
+/* Olho-sobrancelha */
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-glow);
+    border-radius: 50px;
+    padding: 7px 16px;
+}
+
+.hero-eyebrow i {
+    font-size: 0.65rem;
+}
+
+/* Título principal */
+.main-title {
+    font-family: var(--font-titles);
+    font-weight: 800;
+    font-size: clamp(3.5rem, 10vw, 7.5rem);
+    line-height: 0.88;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+
+/* Palavra em destaque */
+.title-accent {
+    background: linear-gradient(135deg, #c1602c, #b08a3f 50%, #3a7a6d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 30px rgba(193, 96, 44, 0.18));
+    display: inline-block;
+}
+
+.main-subtitle {
+    font-size: 1rem;
+    color: var(--text-gray);
+    max-width: 460px;
+    line-height: 1.75;
+    font-style: italic;
+}
+
+/* Botão "explorar" */
+.cta-scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-titles);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: rgba(43, 36, 28, 0.6);
+    border-bottom: 1px solid rgba(43, 36, 28, 0.18);
+    padding-bottom: 6px;
+    transition: var(--transition-global);
+    margin-top: 8px;
+}
+
+.cta-scroll i {
+    animation: bounceDown 2s ease-in-out infinite;
+    font-size: 0.7rem;
+}
+
+.cta-scroll:hover {
+    color: var(--text-white);
+    border-color: rgba(43, 36, 28, 0.4);
+    gap: 14px;
+}
+
+@keyframes bounceDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+/* ================= SEÇÃO ARTISTAS ================= */
+#artists_section {
+    padding: 40px 8% 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-gray);
+}
+
+.section-eyebrow i {
+    color: var(--accent-color);
+    font-size: 0.7rem;
+}
+
+/* Grid */
+.artists-grid {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Card do artista */
+.artist-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: var(--transition-global);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Linha colorida à esquerda */
+.artist-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--card-color, #2b241c);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    border-radius: 2px 0 0 2px;
+}
+
+.artist-card:hover {
+    background: #fff;
+    border-color: var(--card-color, var(--border));
+    box-shadow: 0 8px 30px var(--card-glow, rgba(43, 36, 28, 0.08));
+    transform: translateY(-3px);
+}
+
+.artist-card:hover::after {
+    opacity: 1;
+}
+
+/* Ícone */
+.artist-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(43, 36, 28, 0.04);
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+    transition: var(--transition-global);
+}
+
+.artist-icon-box i {
+    font-size: 1rem;
+    color: var(--card-color, #2b241c);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.artist-card:hover .artist-icon-box {
+    background: color-mix(in srgb, var(--card-color, #2b241c) 14%, transparent);
+    border-color: var(--card-color, #2b241c);
+}
+
+.artist-card:hover .artist-icon-box i {
+    opacity: 1;
+}
+
+/* Textos */
+.artist-card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.artist-card-info h4 {
+    font-family: var(--font-titles);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-white);
+    margin-bottom: 4px;
+    line-height: 1;
+}
+
+.artist-card-info small {
+    font-size: 0.72rem;
+    color: var(--text-gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-style: italic;
+}
+
+/* Seta */
+.card-arrow {
+    font-size: 0.65rem;
+    color: var(--text-gray);
+    flex-shrink: 0;
+    opacity: 0;
+    transition: var(--transition-global);
+}
+
+.artist-card:hover .card-arrow {
+    opacity: 1;
+    color: var(--card-color, #2b241c);
+    transform: translateX(3px);
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media screen and (max-width: 900px) {
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-card:hover {
+        transform: translateX(4px);
+        /* Horizontal no mobile */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #hero_capa {
+        padding: 130px 6% 60px;
+    }
+
+    .main-title {
+        font-size: clamp(2.8rem, 14vw, 4.5rem);
+        letter-spacing: -2px;
+    }
+
+    #artists_section {
+        padding: 30px 5% 80px;
+    }
+}

@@ -1,0 +1,284 @@
+<!-- capa.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discografias</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="src/style/capastyle.css">
+    <link rel="stylesheet" href="src/style/capaheader.css">
+    <link rel="stylesheet" href="src/style/capahome.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="capa-theme">
+
+    <!-- NOTAS CAINDO -->
+    <div id="notes_container"></div>
+
+    <!-- OVERLAY DESFOQUE -->
+    <div id="blury_overlay"></div>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <span class="sidebar-title">
+                <i class="fa-solid fa-record-vinyl"></i>
+                artistas
+            </span>
+            <button id="close_sidebar" aria-label="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link" style="--link-color: #d49270;">
+                <span class="link-icon"><i class="fa-solid fa-cloud"></i></span>
+                <span class="link-text">
+                    <strong>Ariana Grande</strong>
+                    <small>Sweetener</small>
+                </span>
+                <i class="fa-solid fa-arrow-right link-arrow"></i>
+            </a>
+
+            <a href="nanda.html" class="sidebar-link" style="--link-color: #ff3366;">
+                <span class="link-icon"><i class="fa-solid fa-ranking-star"></i></span>
+                <span class="link-text">
+                    <strong>NandaTsunami</strong>
+                    <small>É Disso Que Eu Me Alimento</small>
+                </span>
+                <i class="fa-solid fa-arrow-right link-arrow"></i>
+            </a>
+
+            <a href="emicida.html" class="sidebar-link" style="--link-color: #bc8a5f;">
+                <span class="link-icon"><i class="fa-solid fa-crown"></i></span>
+                <span class="link-text">
+                    <strong>Emicida</strong>
+                    <small>Sobre Crianças, Quadris...</small>
+                </span>
+                <i class="fa-solid fa-arrow-right link-arrow"></i>
+            </a>
+
+            <a href="pabllo.html" class="sidebar-link" style="--link-color: #ff2200;">
+                <span class="link-icon"><i class="fa-solid fa-sun"></i></span>
+                <span class="link-text">
+                    <strong>Pabllo Vittar</strong>
+                    <small>Batidão Tropical Vol. 2</small>
+                </span>
+                <i class="fa-solid fa-arrow-right link-arrow"></i>
+            </a>
+
+            <a href="zimbra.html" class="sidebar-link" style="--link-color: #00a8c2;">
+                <span class="link-icon"><i class="fa-solid fa-mountain-sun"></i></span>
+                <span class="link-text">
+                    <strong>Zimbra</strong>
+                    <small>O Tudo, o Nada e o Mundo</small>
+                </span>
+                <i class="fa-solid fa-arrow-right link-arrow"></i>
+            </a>
+
+            <a href="tasha_tracie.html" class="sidebar-link" style="--link-color: #9c7fd6;">
+                <span class="link-icon"><i class="fa-solid fa-moon"></i></span>
+                <span class="link-text">
+                    <strong>Tasha & Tracie</strong>
+                    <small>Serena e Vênus</small>
+                </span>
+                <i class="fa-solid fa-arrow-right link-arrow"></i>
+            </a>
+
+            <a href="urias.html" class="sidebar-link" style="--link-color: #8a5a2f;">
+                <span class="link-icon"><i class="fa-solid fa-mask"></i></span>
+                <span class="link-text">
+                    <strong>Urias</strong>
+                    <small>Carrancas</small>
+                </span>
+                <i class="fa-solid fa-arrow-right link-arrow"></i>
+            </a>
+
+            <a href="harry.html" class="sidebar-link" style="--link-color: #c97fa0;">
+                <span class="link-icon"><i class="fa-solid fa-guitar"></i></span>
+                <span class="link-text">
+                    <strong>Harry Style</strong>
+                    <small>Harry Style</small>
+                </span>
+                <i class="fa-solid fa-arrow-right link-arrow"></i>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- HEADER -->
+    <header>
+        <nav id="navbar">
+
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Ver artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer artistas</span>
+                </button>
+                <i class="fa-solid fa-chevron-right arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-compact-disc animated-disc"></i>
+                <span>Discografias</span>
+            </div>
+
+            <div class="nav-spacer"></div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main id="capa-main">
+
+        <!-- HERO -->
+        <section id="hero_capa">
+            <div class="hero-text">
+                <p class="hero-eyebrow">
+                    <i class="fa-solid fa-music"></i>
+                    portfólio musical
+                </p>
+                <h1 class="main-title">
+                    cada<br>
+                    <span class="title-accent">álbum</span><br>
+                    uma era
+                </h1>
+                <p class="main-subtitle">
+                    mergulhe fundo na discografia de artistas que
+                    definiram gerações.
+                </p>
+                <a href="#artists_section" class="cta-scroll">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    explorar discografias
+                </a>
+            </div>
+        </section>
+
+        <!-- ARTISTAS -->
+        <section id="artists_section">
+            <p class="section-eyebrow">
+                <i class="fa-solid fa-headphones"></i>
+                escolha um artista
+            </p>
+
+            <div class="artists-grid">
+
+                <a href="index.html" class="artist-card"
+                    style="--card-color:#d49270; --card-glow:rgba(212,146,112,0.18);">
+                    <div class="artist-icon-box">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <div class="artist-card-info">
+                        <h4>Ariana Grande</h4>
+                        <small>Sweetener</small>
+                    </div>
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+                </a>
+
+                <a href="nanda.html" class="artist-card"
+                    style="--card-color:#ff3366; --card-glow:rgba(255,51,102,0.16);">
+                    <div class="artist-icon-box">
+                        <i class="fa-solid fa-ranking-star"></i>
+                    </div>
+                    <div class="artist-card-info">
+                        <h4>NandaTsunami</h4>
+                        <small>É Disso Que Eu Me Alimento</small>
+                    </div>
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+                </a>
+
+                <a href="emicida.html" class="artist-card"
+                    style="--card-color:#bc8a5f; --card-glow:rgba(188,138,95,0.18);">
+                    <div class="artist-icon-box">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <div class="artist-card-info">
+                        <h4>Emicida</h4>
+                        <small>Sobre Crianças, Quadris, Pesadelos e Lições de Casa</small>
+                    </div>
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+                </a>
+
+                <a href="pabllo.html" class="artist-card"
+                    style="--card-color:#ff2200; --card-glow:rgba(255,34,0,0.16);">
+                    <div class="artist-icon-box">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div class="artist-card-info">
+                        <h4>Pabllo Vittar</h4>
+                        <small>Batidão Tropical Vol. 2</small>
+                    </div>
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+                </a>
+
+                <a href="zimbra.html" class="artist-card"
+                    style="--card-color:#00a8c2; --card-glow:rgba(0,168,194,0.16);">
+                    <div class="artist-icon-box">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                    </div>
+                    <div class="artist-card-info">
+                        <h4>Zimbra</h4>
+                        <small>O Tudo, o Nada e o Mundo</small>
+                    </div>
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+                </a>
+
+                <a href="tasha_tracie.html" class="artist-card"
+                    style="--card-color:#9c7fd6; --card-glow:rgba(156,127,214,0.18);">
+                    <div class="artist-icon-box">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <div class="artist-card-info">
+                        <h4>Tasha & Tracie</h4>
+                        <small>Serena e Vênus</small>
+                    </div>
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+                </a>
+
+                <a href="urias.html" class="artist-card"
+                    style="--card-color:#8a5a2f; --card-glow:rgba(138,90,47,0.18);">
+                    <div class="artist-icon-box">
+                        <i class="fa-solid fa-mask"></i>
+                    </div>
+                    <div class="artist-card-info">
+                        <h4>Urias</h4>
+                        <small>Carrancas</small>
+                    </div>
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+                </a>
+
+                <a href="harry.html" class="artist-card"
+                    style="--card-color:#c97fa0; --card-glow:rgba(201,127,160,0.18);">
+                    <div class="artist-icon-box">
+                        <i class="fa-solid fa-guitar"></i>
+                    </div>
+                    <div class="artist-card-info">
+                        <h4>Harry Style</h4>
+                        <small>Harry Style</small>
+                    </div>
+
+                    <a href="gorillaz.html" class="artist-card"
+                        style="--card-color:#fca311; --card-glow:rgba(201,127,160,0.18);">
+                        <div class="artist-icon-box">
+                            <i class="fa-solid fa-ship animated-icon"></i>
+                        </div>
+                        <div class="artist-card-info">
+                            <h4>Gorillaz</h4>
+                            <small>Plastic Beach</small>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right card-arrow"></i>
+                    </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="src/javascript/capa.js"></script>
+</body>
+
+</html>

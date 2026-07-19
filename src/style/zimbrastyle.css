@@ -1,0 +1,264 @@
+/* zimbrastyle.css */
+
+/* ================= GOOGLE FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+
+/* ================= VARIÁVEIS ZIMBRA ================= */
+:root {
+    --bg-zimbra: #0a0a0a;
+    --bg-cards: #161616;
+    --text-light: #ffffff;
+    --text-soft: rgba(255, 255, 255, 0.7);
+    --accent-zimbra: #00d2ff;
+    --accent-hover: #00b8e6;
+
+    --font-titles: 'Special Gothic Expanded One', sans-serif;
+    --font-body: 'Lora', serif;
+
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-zimbra);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 100px 10%;
+}
+
+/* ================= TÍTULOS ================= */
+.section-title {
+    font-family: var(--font-titles);
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-style: italic;
+    color: var(--accent-zimbra);
+    margin-bottom: 60px;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* ================= GRID CRÍTICAS ================= */
+.critica-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* ================= CARD CRÍTICA ================= */
+.critica-card {
+    background: var(--bg-cards);
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.critica-card:hover {
+    border-color: var(--accent-zimbra);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 210, 255, 0.08);
+}
+
+/* ================= HEADER DO CARD ================= */
+.critica-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    height: 45px;
+}
+
+.critica-logo {
+    max-height: 35px;
+    max-width: 120px;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+/* ================= NOTA ================= */
+.nota {
+    font-weight: bold;
+    color: var(--accent-zimbra);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+/* ================= TEXTO CRÍTICA ================= */
+.critica-texto {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-soft);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.critico-nome {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.6;
+}
+
+/* ================= FOOTER ================= */
+#footer {
+    position: relative;
+    background: radial-gradient(circle at 50% 0%, rgba(0, 210, 255, 0.08), transparent 60%), #050505;
+    padding: 70px 10%;
+    border-top: 1px solid rgba(0, 210, 255, 0.15);
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-family: var(--font-titles);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.footer-brand i {
+    color: var(--accent-zimbra);
+    filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.5));
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-text em {
+    display: block;
+    color: var(--accent-zimbra);
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+/* Redes Sociais do Rodapé */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--text-soft);
+    font-size: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    color: var(--bg-zimbra);
+    background: var(--accent-zimbra);
+    border-color: var(--accent-zimbra);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 210, 255, 0.35);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-copyright strong {
+    color: var(--accent-zimbra);
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media screen and (max-width: 1100px) {
+    .critica-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .critica-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .section-subtitle {
+        margin-bottom: 40px;
+    }
+}
+
+/* Ajuste dos botões ovais (Ariana, Nanda, Emicida, Zimbra) */
+.album-switch .btn-default {
+    padding: 12px 25px;
+    /* Aumenta o tamanho interno */
+    font-size: 1rem;
+    /* Deixa o texto maior */
+    border-radius: 50px;
+    /* Mantém o formato bem arredondado */
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+/* O botão ativo (Zimbra) ganha um brilho maior para acompanhar o tamanho */
+.active-album {
+    background-color: var(--accent-zimbra);
+    color: var(--bg-zimbra) !important;
+    box-shadow: 0 0 20px var(--accent-zimbra);
+    transform: scale(1.05);
+    /* Leve destaque visual */
+}

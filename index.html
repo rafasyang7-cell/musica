@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariana Grande | Sweetener</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/style/header.css">
+    <link rel="stylesheet" href="src/style/home.css">
+
+    <link rel="stylesheet" href="src/style/capastyle.css">
+    <link rel="stylesheet" href="src/style/capaheader.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="sweetener-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 5px 0;">
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link active-artist"><i class="fa-solid fa-ranking-star"></i>
+                NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link active-artist"><i class="fa-solid fa-crosshairs"></i> John</a>
+        </nav>
+    </aside>
+    <header>
+        <nav id="navbar">
+
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-cloud animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="#home">álbum</a></li>
+                    <li class="nav-item"><a href="#menu">conceito</a></li>
+                    <li class="nav-item"><a href="#menu2">crítica</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir seções" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+
+        <div id="mobile_menu" role="menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">álbum</a></li>
+                <li class="nav-item"><a href="#menu">conceito</a></li>
+                <li class="nav-item"><a href="#menu2">crítica</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="home">
+            <div id="cta" class="scroll-animate from-left">
+                <h1 class="title">Sweetener</h1>
+                <p class="description">
+                    Sweetener é o quarto álbum de estúdio da artista, lançado mundialmente em 17 de agosto de 2018 pela
+                    Republic Records. O disco marcou
+                    uma fase de profunda transformação e amadurecimento na carreira da artista. O título reflete a ideia
+                    de trazer luz e "adoçar" a vida de alguém.
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-more">Explorar o universo</a>
+                </div>
+            </div>
+
+            <div id="banner" class="scroll-animate from-right">
+                <div class="album-wrapper upside-down">
+                    <a href="https://open.spotify.com/album/3tx8tQqWvYreqpTWuV5CqT" target="_blank" rel="noopener"
+                        title="Ouvir no Spotify">
+                        <img src="src/images/176950-800-auto.png" alt="Capa do álbum Sweetener">
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title scroll-animate from-bottom">A era da luz</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">
+                Onde o minimalismo encontra a perfeição vocal.
+            </h3>
+            <div class="menu-container">
+                <div class="menu-item sweetener-card scroll-animate from-bottom delay-1">
+                    <img src="src/images/the-sweetener-era-aesthetic-v0-8qngqa8lkyde1.webp" alt="Estética Sweetener"
+                        class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Homenagem discreta</h4>
+                        <p class="card-item-description">
+                            A música "Get Well Soon" tem exatamente 5 minutos e 22 seconds,
+                            uma alusão à data do ataque em Manchester (22 de maio de 2017).
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item sweetener-card scroll-animate from-bottom delay-2">
+                    <img src="src/images/Sweetener.webp" alt="Produção de Pharrell Williams" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Duas Identidades Sonoras</h4>
+                        <p class="card-item-description">
+                            A O álbum é dividido entre duas forças da produção. Pharrell Williams trouxe batidas
+                            experimentais, orgânicas e cheias de percussão, enquanto Max Martin entregou o pop perfeito
+                            e melódico tradicional.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item sweetener-card scroll-animate from-bottom delay-3">
+                    <img src="src/images/5.jpg" alt="Letras e composições" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">A Origem de "R.E.M"</h4>
+                        <p class="card-item-description">
+                            Esta faixa era originalmente uma música descartada da cantora Beyoncé, chamada "Wake Up".
+                            Ariana reescreveu partes da letra, adicionou novos vocais e transformou a demo no formato
+                            final do álbum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu2">
+            <h2 class="section-title scroll-animate from-bottom">Veredito da Crítica</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">
+                O albúm alcançou a aclamação mundial e seu primeiro Grammy.
+            </h3>
+            <div class="critica-grid">
+                <div class="critica-card sweetener-card scroll-animate from-bottom delay-1">
+                    <div class="critica-header">
+                        <img src="src/images/Pitchfork 99.webp" alt="Logo Pitchfork" class="critica-logo">
+                        <span class="nota">★★★★☆ (4/5)</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Sweetener prova ser o álbum mais inventivo de Ariana até hoje,
+                        abraçando o caos e a doçura com brilho experimental."
+                    </p>
+                    <span class="critico-nome">Pitchfork</span>
+                </div>
+                <div class="critica-card sweetener-card scroll-animate from-bottom delay-2">
+                    <div class="critica-header">
+                        <img src="src/images/rolling-stone-logo.png" alt="Logo Rolling Stone" class="critica-logo">
+                        <span class="nota">★★★★☆ (4/5)</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Uma afirmação de autoconfiança e cura.
+                        Grande nunca soou tão livre e no controle de sua arte."
+                    </p>
+                    <span class="critico-nome">Rolling Stone</span>
+                </div>
+                <div class="critica-card sweetener-card scroll-animate from-bottom delay-3">
+                    <div class="critica-header">
+                        <img src="src/images/nme-logo.png" alt="Logo NME" class="critica-logo">
+                        <span class="nota">★★★☆☆ (3/5)</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Um disco que não apenas define uma fase,
+                        mas redefine o que o pop moderno pode ser."
+                    </p>
+                    <span class="critico-nome">NME Magazine</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fa-solid fa-cloud"></i>
+                <span>Discografias</span>
+            </div>
+            <p class="footer-text">
+                "Get well soon, and send some light to those who need it."
+                <br>
+                Projeto desenvolvido para portfólio, unindo design e paixão por música.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rafaela-syang-80185b272/" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:rafasyang7@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/script.js"></script>
+    <script src="src/javascript/capa.js"></script>
+
+    <script>
+        $(window).on('scroll', function () {
+            var scrollDistance = $(this).scrollTop();
+            var textElement = $('.brand-text');
+
+            if (scrollDistance > 50) {
+                textElement.css({
+                    'opacity': '0',
+                    'visibility': 'hidden',
+                    'transition': 'opacity 0.3s ease, visibility 0.3s ease'
+                });
+            } else {
+                textElement.css({
+                    'opacity': '1',
+                    'visibility': 'visible'
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

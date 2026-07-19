@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Styles | Harry Styles</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style/harrystyle.css">
+    <link rel="stylesheet" href="src/style/harryheader.css">
+    <link rel="stylesheet" href="src/style/harryhome.css">
+
+    <link rel="stylesheet" href="src/style/capastyle.css">
+    <link rel="stylesheet" href="src/style/capaheader.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="harry-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 5px 0;">
+
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link active-artist"><i class="fa-solid fa-ranking-star"></i>
+                NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link active-artist"><i class="fa-solid fa-crosshairs"></i> John</a>
+        </nav>
+    </aside>
+
+    <header>
+        <nav id="navbar">
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-water animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="#home">álbum</a></li>
+                    <li class="nav-item"><a href="#menu">conceito</a></li>
+                    <li class="nav-item"><a href="#menu2">crítica</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir seções" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div id="cta">
+                <h1 class="title">Harry Styles</h1>
+                <p class="description">
+                    O álbum homônimo de estreia de Harry Styles marca sua transição artística para um som profundamente
+                    influenciado pelo soft rock dos anos 70, britpop e baladas íntimas. Com composições vulneráveis
+                    sobre relacionamentos e isolamento, o projeto revelou ao mundo sua nova e autêntica identidade
+                    musical.
+                </p>
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-more">Mergulhar na era</a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <div class="album-wrapper floating-art">
+                    <a href="https://open.spotify.com/intl-pt/album/1FZKIm3JVDCxTchXDo5jOV" target="_blank"
+                        rel="noopener" title="Ouvir no Spotify">
+                        <img src="src/images/banho.jfif" alt="Capa do álbum Harry Styles">
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">A Estética Intimista</h2>
+            <h3 class="section-subtitle">Vulnerabilidade envolta em rock clássico e melancolia.</h3>
+
+            <div class="menu-container">
+                <div class="menu-item harry-card">
+                    <img src="src/images/reto.jpg" alt="Water Aesthetics" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">A Água e o Rosa Pastel</h4>
+                        <p class="card-item-description">
+                            A icônica sessão de fotos na banheira com água cor-de-rosa simboliza purificação,
+                            renascimento artístico e a nudez emocional de suas composições.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item harry-card">
+                    <img src="src/images/disco.jpg" alt="Vintage Influence" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Processo de Criação</h4>
+                        <p class="card-item-description">
+                            A maior parte do disco foi escrita e gravada isoladamente em Port Antonio, na Jamaica, onde
+                            Styles e seus produtores se fecharam para fugir da pressão da mídia.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item harry-card">
+                    <img src="src/images/vermei.jfif" alt="Sign of the Times" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Sign of the Times</h4>
+                        <p class="card-item-description">
+                            A música de mais de 5 minutos foi escrita do ponto de vista de uma mãe que está morrendo
+                            logo após dar à luz e tem apenas cinco minutos para dar seus últimos conselhos ao filho
+                            recém-nascido.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu2">
+            <h2 class="section-title">Recepção Crítica</h2>
+            <h3 class="section-subtitle">Como os principais veículos receberam o primeiro passo solo de Harry.</h3>
+
+            <div class="critica-grid">
+                <div class="critica-card harry-card">
+                    <div class="critica-header">
+                        <img src="src/images/rolling-stone-logo.png" alt="Rolling Stone" class="critica-logo">
+                        <span class="nota">★★★★☆</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Ao longo de tudo isso, ele consegue se manter distante de todas as armadilhas que costumam
+                        sabotar a empreitada solo de uma estrela de boy-band. Mas como o disco inteiro comprova, não há
+                        nada de comum nesse cara."
+                    </p>
+                    <span class="critico-nome">Rolling Stone</span>
+                </div>
+
+                <div class="critica-card harry-card">
+                    <div class="critica-header">
+                        <img src="src/images/pitchfork-wordmark-new.png" alt="NME" class="critica-logo">
+                        <span class="nota">★★★★☆</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Styles se sai melhor quando evita os grandes gestos e foca nos pequenos detalhes, onde sua
+                        composição ganha um espaço real para respirar."
+                    </p>
+                    <span class="critico-nome">NME Magazine</span>
+                </div>
+
+                <div class="critica-card harry-card">
+                    <div class="critica-header">
+                        <img src="src/images/usa.png" alt="Consequence of Sound" class="critica-logo">
+                        <span class="nota">★★★★☆</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Styles conseguiu o que poucos ex-membros de boy bands conseguem: criar um álbum de estreia solo
+                        que soa genuíno, artisticamente ambicioso e completamente distante do som que o tornou famoso."
+                    </p>
+                    <span class="critico-nome">U.S.A TODAY</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fa-solid fa-water"></i>
+                <span>Discografias</span>
+            </div>
+            <p class="footer-text">
+                "We don't talk enough, we should open up, before it's all too much."
+                <br>
+                Projeto desenvolvido combinando tipografia vintage e design moderno.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:rafasyang7@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/harry.js"></script>
+    <script src="src/javascript/capa.js"></script>
+</body>
+
+</html>

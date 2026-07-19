@@ -1,0 +1,356 @@
+/* tashaheader.css */
+
+header {
+    width: 100%;
+    padding: 18px 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(6, 5, 15, 0.2);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    border-bottom: 1px solid rgba(176, 127, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backface-visibility: hidden;
+    will-change: padding, background-color;
+}
+
+header.scrolled {
+    padding: 10px 8%;
+    background: rgba(6, 5, 15, 0.92);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    box-shadow: 0 10px 35px rgba(176, 127, 255, 0.08);
+    border-bottom: 1px solid rgba(176, 127, 255, 0.2);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ================= LOGO CENTRAL (a lua fica só aqui) ================= */
+.logo-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-titles);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #fff;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    flex-shrink: 0;
+}
+
+.logo-center i {
+    color: var(--accent-tasha);
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 6px rgba(176, 127, 255, 0.5));
+    flex-shrink: 0;
+}
+
+.animated-icon {
+    transition: transform 0.4s ease;
+}
+
+.logo-center:hover .animated-icon {
+    transform: rotate(-12deg) scale(1.1);
+}
+
+/* Texto some no scroll */
+.brand-text {
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s ease,
+        margin-left 0.3s ease;
+}
+
+header.scrolled .brand-text {
+    max-width: 0;
+    opacity: 0;
+    margin-left: -10px;
+}
+
+/* ================= BOTÃO ABRIR SIDEBAR ================= */
+#toggle_container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#sidebar_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: rgba(240, 238, 255, 0.75);
+    border: 1px solid rgba(176, 127, 255, 0.2);
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+}
+
+#sidebar_btn:hover {
+    background-color: var(--accent-tasha);
+    color: #06050f;
+    border-color: var(--accent-tasha);
+    box-shadow: 0 4px 14px rgba(176, 127, 255, 0.35);
+}
+
+.arrow-indicator {
+    color: var(--color-gray);
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+/* ================= NAV LIST (álbum / conceito / crítica) ================= */
+#nav_list_container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#nav_list {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    padding-left: 20px;
+    border-left: 1px solid rgba(176, 127, 255, 0.2);
+}
+
+#nav_list li a {
+    display: flex;
+    align-items: center;
+    padding: 7px 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(240, 238, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+#nav_list li a:hover {
+    color: #fff;
+    background: rgba(176, 127, 255, 0.1);
+}
+
+#nav_list li.active a {
+    background: linear-gradient(135deg, var(--accent-tasha), #d0aaff);
+    color: #06050f;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(176, 127, 255, 0.3);
+}
+
+/* ================= SIDEBAR DE ARTISTAS ================= */
+#sidebar_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 320px;
+    max-width: 85vw;
+    background: linear-gradient(180deg, #0e0b1e, #06050f);
+    box-shadow: 15px 0 40px rgba(0, 0, 0, 0.55);
+    transform: translateX(-105%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10002;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px;
+}
+
+#sidebar_menu.active {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.sidebar-header h3 {
+    font-family: var(--font-titles);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-gray);
+}
+
+#close_sidebar {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#close_sidebar:hover {
+    color: var(--accent-tasha);
+    transform: rotate(90deg);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-family: var(--font-titles);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: lowercase;
+    color: var(--text-light);
+    background: rgba(176, 127, 255, 0.05);
+    transition: 0.3s ease;
+}
+
+.sidebar-link i {
+    width: 18px;
+    text-align: center;
+    color: var(--accent-tasha);
+}
+
+.sidebar-link:hover {
+    background: rgba(176, 127, 255, 0.12);
+    transform: translateX(4px);
+}
+
+.sidebar-link.active-artist {
+    background: linear-gradient(135deg, var(--accent-tasha), #d0aaff);
+    color: #06050f;
+    box-shadow: 0 8px 18px var(--accent-glow);
+}
+
+.sidebar-link.active-artist i {
+    color: #06050f;
+}
+
+#blury_overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 10001;
+}
+
+#blury_overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ================= MENU MOBILE (apenas álbum / conceito / crítica) ================= */
+#mobile_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(160deg, #06050f, #0e0b1e);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    z-index: 999;
+    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-110%);
+    visibility: hidden;
+    overflow-y: auto;
+}
+
+#mobile_menu.active {
+    transform: translateY(0);
+    visibility: visible;
+}
+
+#mobile_nav_list {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+#mobile_nav_list li {
+    margin: 22px 0;
+}
+
+#mobile_nav_list li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 1.8rem;
+    font-family: var(--font-titles);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.3s ease;
+}
+
+#mobile_nav_list li a:hover {
+    color: var(--accent-tasha);
+    text-shadow: 0 0 20px rgba(176, 127, 255, 0.4);
+}
+
+#mobile_btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+@media screen and (max-width: 1080px) {
+    #nav_list_container {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+    }
+
+    header {
+        padding: 15px 6%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #sidebar_menu {
+        width: 100%;
+        max-width: 100vw;
+    }
+}

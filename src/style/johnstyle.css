@@ -1,0 +1,178 @@
+/* ================= JOHNSTYLE.CSS - ESTÉTICA PRETO E VERMELHO FOSCO ================= */
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;900&family=Syncopate:wght@700&display=swap');
+
+:root {
+    --font-titles: "Syncopate", sans-serif;
+    /* Industrial, larga, moderna e agressiva */
+    --font-text: "Albert Sans", sans-serif;
+
+    /* Cores Fosco Matte / Underground */
+    --bg-john: #0b0b0c;
+    /* Preto profundo carvão */
+    --bg-cards: #131315;
+    /* Grafite fosco industrial */
+    --accent-red: #c1272d;
+    /* Vermelho fosco envelhecido / Vermelho sangue */
+    --accent-red-glow: rgba(193, 39, 45, 0.2);
+    --text-light: #f1f1f2;
+    --text-muted: #71717a;
+
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-john);
+    color: var(--text-light);
+    font-family: var(--font-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Barra de rolagem fosca */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-john);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-red);
+    border-radius: 0px;
+}
+
+h1,
+h2,
+h3,
+.section-title,
+.nota {
+    font-family: var(--font-titles);
+}
+
+section {
+    width: 100%;
+    padding: 120px 10% 80px 10%;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(1.4rem, 3.5vw, 2.3rem);
+    text-align: center;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-red);
+    margin: 15px auto 0 auto;
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 70px;
+    max-width: 600px;
+    margin: 0 auto 70px auto;
+}
+
+/* CARDS DETALHES FOSCOS */
+.john-card {
+    background: var(--bg-cards);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    transition: var(--transition-smooth);
+}
+
+.john-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-red);
+    box-shadow: 0 15px 35px var(--accent-red-glow);
+}
+
+/* FOOTER UNDERGROUND */
+#footer {
+    background-color: #050506;
+    padding: 80px 10% 40px;
+    border-top: 1px solid rgba(193, 39, 45, 0.15);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-brand {
+    font-family: var(--font-titles);
+    font-size: 1.1rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: 2px;
+}
+
+.footer-brand i {
+    color: var(--accent-red);
+}
+
+.footer-text {
+    max-width: 500px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: var(--bg-cards);
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    background: var(--accent-red);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

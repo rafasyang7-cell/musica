@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorillaz | Plastic Beach</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style/gorillazstyle.css">
+    <link rel="stylesheet" href="src/style/gorillazheader.css">
+    <link rel="stylesheet" href="src/style/gorillazhome.css">
+
+    <link rel="stylesheet" href="src/style/capastyle.css">
+    <link rel="stylesheet" href="src/style/capaheader.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="gorillaz-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 5px 0;">
+
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link active-artist"><i class="fa-solid fa-ranking-star"></i>
+                NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link active-artist"><i class="fa-solid fa-crosshairs"></i> John</a>
+        </nav>
+    </aside>
+    <header>
+        <nav id="navbar">
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-ship animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="#home">álbum</a></li>
+                    <li class="nav-item"><a href="#menu">conceito</a></li>
+                    <li class="nav-item"><a href="#menu2">crítica</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir seções" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu" role="menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">álbum</a></li>
+                <li class="nav-item"><a href="#menu">conceito</a></li>
+                <li class="nav-item"><a href="#menu2">crítica</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div id="cta">
+                <h1 class="title">Plastic Beach</h1>
+                <p class="description">
+                    Plastic Beach é o aclamado terceiro álbum de estúdio da banda virtual britânica Gorillaz, lançado
+                    mundialmente em março de 2010. Considerado por muitos críticos e fãs como a grande obra-prima do
+                    projeto idealizado por Damon Albarn e pelo ilustrador Jamie Hewlett, o disco é um marco da música
+                    pop contemporânea que mistura synth-pop, hip-hop, funk e música orquestral.
+                </p>
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-more">Navegar até a ilha</a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <div class="album-wrapper ocean-sway">
+                    <a href="https://open.spotify.com/intl-pt/album/2dIGnmEIy1WZIcZCFSj6i8" target="_blank"
+                        rel="noopener" title="Ouvir no Spotify">
+                        <img src="src/images/ilha.jpg" alt="Capa do álbum Plastic Beach do Gorillaz">
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">O Conceito da Ilha</h2>
+            <h3 class="section-subtitle">Deixando o mundo real para trás e conhecendo o quartel-general da banda</h3>
+
+            <div class="menu-container">
+                <div class="menu-item gorillaz-card">
+                    <img src="src/images/fri.avif" alt="Eco-Distopia" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Poluição e Crítica</h4>
+                        <p class="card-item-description">
+                            A narrativa visual aborda o consumismo e o descarte de lixo global, criando beleza a partir
+                            do plástico e das sobras industriais da humanidade.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item gorillaz-card">
+                    <img src="src/images/surf.jpg" alt="Colaborações" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Quase falência</h4>
+                        <p class="card-item-description">
+                            O álbum teve um orçamento astronômico devido aos clipes caros e à contratação de orquestras
+                            inteiras, gerando prejuízos imensos na turnê.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item gorillaz-card">
+                    <img src="src/images/projeto.jpg" alt="Fase 3" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Visual 3D & Animação</h4>
+                        <p class="card-item-description">
+                            A Fase 3 introduziu cenários em maquetes reais misturadas com computação gráfica, mudando o
+                            visual tradicional 2D dos integrantes virtuais.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu2">
+            <h2 class="section-title">Recepção da civilização</h2>
+            <h3 class="section-subtitle">Qual a opinião dos criticos sobre o ambicioso manifesto pop-ecológico de Damon
+                Albarn.</h3>
+
+            <div class="critica-grid">
+                <div class="critica-card gorillaz-card">
+                    <div class="critica-header">
+                        <img src="src/images/pitchfork-wordmark-new.png" alt="Pitchfork" class="critica-logo">
+                        <span class="nota">8.5/10</span>
+                    </div>
+                    <p class="critica-texto">
+                        " As músicas 'Empire Ants' e 'To Binge' são duas das coisas mais cativantes aqui — elas
+                        são arejadas, elusivas e incrivelmente lindas. Fazia anos que Albarn não escrevia algo tão
+                        flagrantemente deslumbrante."
+                    </p>
+                    <span class="critico-nome">Pitchfork</span>
+                </div>
+
+                <div class="critica-card gorillaz-card">
+                    <div class="critica-header">
+                        <img src="src/images/entre.png" alt="The Guardian" class="critica-logo">
+                        <span class="nota">★★★★★</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Um banquete pop fenomenal... Albarn mistura gêneros com a habilidade de um cientista maluco,
+                        resultando no trabalho mais focado e exuberante do Gorillaz até hoje."
+                    </p>
+                    <span class="critico-nome">Entertainment Weekly</span>
+                </div>
+
+                <div class="critica-card gorillaz-card">
+                    <div class="critica-header">
+                        <img src="src/images/exi.jfif" alt="NME" class="critica-logo">
+                        <span class="nota">★★★★☆</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Ao focar pesadamente nos sintetizadores e na atmosfera marinha, Plastic Beach se transforma no
+                        disco mais coeso, maduro e sonoramente deslumbrante que a banda já entregou."
+                    </p>
+                    <span class="critico-nome">Slant Magazine</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fa-solid fa-ship"></i>
+                <span>Discografias</span>
+            </div>
+            <p class="footer-text">
+                "Welcome to the world of the Plastic Beach."
+                <br>
+                Portfólio musical tematizado com designs industriais e tropicais.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:rafasyang7@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/gorillaz.js"></script>
+    <script src="src/javascript/capa.js"></script>
+</body>
+
+</html>

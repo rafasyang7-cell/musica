@@ -1,0 +1,219 @@
+/* ================= GORILLAZHOME.CSS ================= */
+
+#home {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 5%;
+    padding-top: 150px;
+}
+
+#cta .title {
+    font-size: clamp(2.3rem, 5.5vw, 4.2rem);
+    color: var(--text-light);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+#cta .description {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 520px;
+}
+
+.btn-more {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--accent-orange);
+    color: #000;
+    font-family: var(--font-titles);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(252, 163, 17, 0.3);
+    transition: var(--transition-smooth);
+}
+
+.btn-more:hover {
+    background: var(--accent-cyan);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 180, 216, 0.4);
+    transform: translateY(-2px);
+}
+
+/* CONTAINER DA CAPA COM ANIMAÇÃO DE BALANÇO DE MAR */
+.album-wrapper {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.album-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Animação Contínua simulando Ondas */
+.ocean-sway {
+    animation: liquidSway 6s ease-in-out infinite;
+}
+
+@keyframes liquidSway {
+
+    0%,
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+
+    33% {
+        transform: rotate(1.5deg) translateY(-6px);
+    }
+
+    66% {
+        transform: rotate(-1.5deg) translateY(4px);
+    }
+}
+
+.spotify-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 33, 61, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.spotify-overlay i {
+    color: #1db954;
+    font-size: 3.5rem;
+    transform: scale(0.7);
+    transition: var(--transition-smooth);
+}
+
+.album-wrapper:hover .spotify-overlay {
+    opacity: 1;
+}
+
+.album-wrapper:hover .spotify-overlay i {
+    transform: scale(1);
+}
+
+/* CONCEITO GRID */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.menu-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.menu-details {
+    padding: 25px;
+}
+
+.card-item-title {
+    font-family: var(--font-text);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--accent-orange);
+    margin-bottom: 10px;
+}
+
+.card-item-description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* CRÍTICAS COM LOGO DO VEÍCULO */
+.critica-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.critica-card {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.critica-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.critica-logo {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    /* Harmoniza as logos em branco no fundo escuro */
+    opacity: 0.7;
+    transition: var(--transition-smooth);
+}
+
+.critica-card:hover .critica-logo {
+    opacity: 1;
+}
+
+.nota {
+    color: var(--accent-orange);
+    font-size: 0.85rem;
+}
+
+.critica-texto {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.critico-nome {
+    font-family: var(--font-text);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--accent-cyan);
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 868px) {
+    #home {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    #cta .description {
+        margin: 0 auto 30px auto;
+    }
+}

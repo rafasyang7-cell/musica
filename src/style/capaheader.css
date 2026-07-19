@@ -1,0 +1,147 @@
+/* capaheader.css — tema claro */
+
+header {
+    width: 100%;
+    padding: 20px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(247, 241, 228, 0.92) 0%, rgba(247, 241, 228, 0) 100%);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ================= BOTÃO SIDEBAR ================= */
+#toggle_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+#sidebar_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--text-gray);
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 9px 18px;
+    cursor: pointer;
+    transition: var(--transition-global);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+#sidebar_btn i {
+    font-size: 0.85rem;
+}
+
+#sidebar_btn:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent-glow);
+    color: var(--accent-color);
+}
+
+/* Seta animada */
+.arrow-indicator {
+    font-size: 0.6rem;
+    color: var(--accent-color);
+    animation: pulseRight 2s ease-in-out infinite;
+}
+
+@keyframes pulseRight {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateX(5px);
+        opacity: 1;
+    }
+}
+
+/* ================= LOGO CENTRALIZADA ================= */
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-titles);
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-white);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.logo-center i {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 8px rgba(193, 96, 44, 0.35));
+}
+
+/* Rotação do disco */
+.animated-disc {
+    animation: spinDisc 10s linear infinite;
+}
+
+@keyframes spinDisc {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Espaçador */
+.nav-spacer {
+    flex: 1;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    #sidebar_btn span,
+    .arrow-indicator {
+        display: none;
+    }
+
+    #sidebar_btn {
+        padding: 9px 12px;
+    }
+
+    .logo-center {
+        font-size: 0.88rem;
+        letter-spacing: 2px;
+    }
+
+    .logo-center i {
+        font-size: 1rem;
+    }
+}

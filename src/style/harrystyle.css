@@ -1,0 +1,167 @@
+/* ================= HARRYSTYLE.CSS - DESIGN GLOBAL VINTAGE ================= */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Syne:wght@700;800&display=swap');
+
+:root {
+    --font-titles: "Syne", sans-serif;
+    --font-text: "Lora", serif;
+
+    /* Cores Temáticas Inspiradas na Paleta da Capa */
+    --bg-harry: #f7eff0;
+    /* Rosa bem clarinho/pastel da banheira */
+    --bg-cards: #ffffff;
+    --accent-pink: #dfb2b7;
+    /* Rosa queimado/antigo */
+    --accent-blue: #7c9299;
+    /* Cinza azulado vintage */
+    --color-dark: #2c2525;
+    --color-muted: #6e6363;
+
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-harry);
+    color: var(--color-dark);
+    font-family: var(--font-text);
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+/* Barra de rolagem estilizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-harry);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-pink);
+    border-radius: 10px;
+}
+
+h1,
+h2,
+h3,
+.section-title,
+.nota {
+    font-family: var(--font-titles);
+    text-transform: lowercase;
+    letter-spacing: -1px;
+}
+
+section {
+    width: 100%;
+    padding: 120px 10% 80px 10%;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    text-align: center;
+    color: var(--color-dark);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--color-muted);
+    margin-bottom: 70px;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 70px auto;
+}
+
+/* CARDS COM BORDAS ARREDONDADAS E FLUIDAS */
+.harry-card {
+    background: var(--bg-cards);
+    border: 1px solid rgba(223, 178, 183, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(44, 37, 37, 0.04);
+    transition: var(--transition-smooth);
+}
+
+.harry-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-pink);
+    box-shadow: 0 15px 40px rgba(223, 178, 183, 0.2);
+}
+
+/* FOOTER VINTAGE */
+#footer {
+    background-color: #ede2e3;
+    padding: 80px 10% 40px;
+    border-top: 1px solid rgba(22df, 178, 183, 0.4);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-brand {
+    font-family: var(--font-titles);
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-brand i {
+    color: var(--accent-pink);
+}
+
+.footer-text {
+    max-width: 500px;
+    color: var(--color-muted);
+    font-style: italic;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-cards);
+    color: var(--color-dark);
+    border: 1px solid rgba(22df, 178, 183, 0.3);
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    background: var(--accent-pink);
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    letter-spacing: 1px;
+}

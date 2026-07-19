@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-Scale=1.0">
+    <title>Emicida | Sobre Crianças, Quadris, Pesadelos e Lições de Casa</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style/emicidastyle.css">
+    <link rel="stylesheet" href="src/style/emicidaheader.css">
+    <link rel="stylesheet" href="src/style/emicidahome.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="emicida-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(244,236,226,0.08); margin: 5px 0;">
+
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link active-artist"><i class="fa-solid fa-ranking-star"></i>
+                NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link active-artist"><i class="fa-solid fa-crosshairs"></i> John</a>
+        </nav>
+    </aside>
+
+    <header>
+
+        <nav id="navbar">
+
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-crown animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="#home">Álbum</a></li>
+                    <li class="nav-item"><a href="#conceito">Conceito</a></li>
+                    <li class="nav-item"><a href="#critica">Crítica</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir menu" aria-haspopup="true" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu" role="menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home" role="menuitem">Álbum</a></li>
+                <li class="nav-item"><a href="#conceito" role="menuitem">Conceito</a></li>
+                <li class="nav-item"><a href="#critica" role="menuitem">Crítica</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="home">
+            <div id="cta" class="scroll-animate from-left">
+                <h1 class="title">Sobre Crianças, Quadris, Pesadelos e Lições de Casa</h1>
+                <p class="description">
+                    Este é um álbum que reflete sobre a ancestralidade africana, a realidade social brasileira e a
+                    infância, conectando vivências em Cabo Verde, Angola e São Paulo. O disco mistura rap, samba e MPB
+                    para anunciar e denunciar o racismo, desigualdade e violência, enquanto celebra a cultura negra e a
+                    vida.
+                </p>
+                <div id="cta_buttons">
+                    <a href="#conceito" class="btn-more">Explorar as raízes</a>
+                </div>
+            </div>
+
+            <div id="banner" class="scroll-animate from-right">
+                <div class="album-wrapper emicida-animation">
+                    <a href="https://open.spotify.com/intl-pt/album/1Bv1I5fD0H3wN2ZqS6A6I0" target="_blank"
+                        rel="noopener" title="Ouvir no Spotify">
+                        <img src="src/images/album emicida.webp" alt="Capa do álbum SCQPL do Emicida">
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="conceito">
+            <h2 class="section-title scroll-animate from-bottom">A força da raça</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">Um projeto gravado entre continentes, resgatando a
+                essência da diáspora.</h3>
+
+            <div class="menu-container">
+                <div class="menu-item scroll-animate from-bottom delay-1">
+                    <img src="src/images/encarando.jfif" alt="Ancestralidade" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Ancestralidade e conexão</h4>
+                        <p class="card-item-description">O álbum é fruto de uma viagem ao continentee africano, buscando
+                            raízes e semelhanças com a periferia brasileira.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-animate from-bottom delay-2">
+                    <img src="src/images/emicida foto 2.jpg" alt="Conexão Racional" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Conexão racional</h4>
+                        <p class="card-item-description">O título faz referência a uma vivência sensorial, conectando
+                            passado, presente e futuro em uma turnê histórica.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-animate from-bottom delay-3">
+                    <img src="src/images/radio.jpg" alt="Reconhecimento" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Reconhecimento</h4>
+                        <p class="card-item-description">Indicado ao Grammy Latino, o álbum consolidou Emicida como um
+                            dos maiores compositores do Brasil.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="critica">
+            <h2 class="section-title scroll-animate from-bottom">O olhar da crítica</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">confira as resenhas e o reconhecimento merecido que
+                o álbum recebeu.</h3>
+
+            <div class="critica-grid">
+                <div class="critica-card scroll-animate from-bottom delay-1">
+                    <div class="critica-header">
+                        <img src="src/images/globo imagem.png" alt="Logo O Globo" class="critica-logo">
+                        <span class="nota">★★★★★</span>
+                    </div>
+                    <p class="critica-texto">"Emicida entrega rimas e sons sem estereótipos. É um tratado sobre a
+                        herança africana e a realidade brasileira."</p>
+                    <span class="critico-nome">Jornal O Globo</span>
+                </div>
+
+                <div class="critica-card scroll-animate from-bottom delay-2">
+                    <div class="critica-header">
+                        <img src="src/images/Rolling Stone Brasil.png" alt="Logo Rolling Stone" class="critica-logo">
+                        <span class="nota">9.5/10</span>
+                    </div>
+                    <p class="critica-texto">"O álbum é uma exaltação da cultura negra com uma mensagem acessível,
+                        documentando com maestria o que viu na África."</p>
+                    <span class="critico-nome">Rolling Stone Brasil</span>
+                </div>
+
+                <div class="critica-card scroll-animate from-bottom delay-3">
+                    <div class="critica-header">
+                        <img src="src/images/Música Instantânea.png" alt="Logo Música Instantânea" class="critica-logo">
+                        <span class="nota">Essencial</span>
+                    </div>
+                    <p class="critica-texto">"O rapper convida o ouvinte a explorar um cenário de cores e batidas
+                        solares, sem jamais ignorar as cicatrizes do racismo."</p>
+                    <span class="critico-nome">Música Instantânea</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fa-solid fa-crown"></i>
+                <span>Discografias</span>
+            </div>
+
+            <p class="footer-text">
+                "Vi Deus, e ele era uma mulher preta." <br>
+                Projeto desenvolvido para portfólio, unindo design e paixão por música.
+            </p>
+
+            <div class="footer-socials">
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rafaela-syang-80185b272/" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:rafasyang7@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/emicidascript.js"></script>
+</body>
+
+</html>

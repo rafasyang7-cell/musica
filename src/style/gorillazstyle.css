@@ -1,0 +1,168 @@
+/* ================= GORILLAZSTYLE.CSS - GLOBAL TROPICAL/DISTÓPICO ================= */
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+    --font-titles: "Chango", sans-serif;
+    /* Fonte expressiva e caricata como o estilo do Gorillaz */
+    --font-text: "Outfit", sans-serif;
+
+    /* Cores Temáticas de Plastic Beach */
+    --bg-gorillaz: #14213d;
+    /* Azul marinho profundo do oceano */
+    --bg-cards: #1d2d50;
+    /* Tom de azul intermediário para blocos */
+    --accent-orange: #fca311;
+    /* Laranja pôr-do-sol do céu da capa */
+    --accent-cyan: #00b4d8;
+    /* Ciano plástico/marinho artificial */
+    --text-light: #e5e5e5;
+    --text-muted: #94a3b8;
+
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-gorillaz);
+    color: var(--text-light);
+    font-family: var(--font-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Scrollbar temática de plástico e oceano */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-gorillaz);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-orange);
+    border-radius: 4px;
+}
+
+h1,
+h2,
+h3,
+.section-title,
+.nota {
+    font-family: var(--font-titles);
+    letter-spacing: 0px;
+}
+
+section {
+    width: 100%;
+    padding: 120px 10% 80px 10%;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+    text-align: center;
+    color: var(--accent-orange);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 70px;
+    max-width: 600px;
+    margin: 0 auto 70px auto;
+}
+
+/* CARDS ESTILO PLASTIC BEACH */
+.gorillaz-card {
+    background: var(--bg-cards);
+    border: 2px solid rgba(0, 180, 216, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transition: var(--transition-smooth);
+}
+
+.gorillaz-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 18px 40px rgba(0, 180, 216, 0.15);
+}
+
+/* FOOTER MARÍTIMO */
+#footer {
+    background-color: #0b132b;
+    padding: 80px 10% 40px;
+    border-top: 2px solid rgba(252, 163, 17, 0.2);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-brand {
+    font-family: var(--font-titles);
+    font-size: 1.3rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand i {
+    color: var(--accent-orange);
+}
+
+.footer-text {
+    max-width: 550px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--bg-cards);
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    background: var(--accent-orange);
+    color: #000;
+    transform: translateY(-4px) rotate(5deg);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}

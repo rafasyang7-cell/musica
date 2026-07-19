@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John | Na Trave</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style/johnstyle.css">
+    <link rel="stylesheet" href="src/style/johnheader.css">
+    <link rel="stylesheet" href="src/style/johnhome.css">
+
+    <link rel="stylesheet" href="src/style/capastyle.css">
+    <link rel="stylesheet" href="src/style/capaheader.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="john-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 5px 0;">
+
+
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link active-artist"><i class="fa-solid fa-ranking-star"></i>
+                NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link active-artist"><i class="fa-solid fa-crosshairs"></i> John</a>
+        </nav>
+    </aside>
+
+    <header>
+        <nav id="navbar">
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-crosshairs animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="#home">álbum</a></li>
+                    <li class="nav-item"><a href="#menu">produção</a></li>
+                    <li class="nav-item"><a href="#menu2">veredito</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir seções" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu" role="menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">álbum</a></li>
+                <li class="nav-item"><a href="#menu">produção</a></li>
+                <li class="nav-item"><a href="#menu2">veredito</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div id="cta">
+                <h1 class="title">Na Trave</h1>
+                <p class="description">
+                    Um mergulho cru nas batidas urbanas e barras viscerais. Em "Na Trave", John rima sobre o
+                    quase-sucesso, a pressão do asfalto, os riscos calculados e a linha tênue entre a glória e o
+                    recomeço. É a poesia da persistência moldada em beats agressivos.
+                </p>
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-more">Analisar as tracks</a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <div class="album-wrapper edge-glow">
+                    <a href="https://open.spotify.com/intl-pt/album/5cmUZF5k2gjrsYYJsRAWxq" target="_blank"
+                        rel="noopener" title="Ouvir no Spotify">
+                        <img src="src/images/flor.jfif" alt="Capa do álbum Na Trave do John">
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">A Arquitetura dos Beats</h2>
+            <h3 class="section-subtitle">Bastidores da montagem sonora e estética fosca de um projeto de peso.</h3>
+
+            <div class="menu-container">
+                <div class="menu-item john-card">
+                    <img src="src/images/john_bastidores1.jpg" alt="Estúdio" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Linhas de Baixo Graves</h4>
+                        <p class="card-item-description">
+                            Sub-graves distorcidos dão o tom sombrio e noturno ao álbum, recriando a atmosfera densa das
+                            ruas da cidade grande.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item john-card">
+                    <img src="src/images/john_bastidores2.jpg" alt="Lirismo" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Caneta Cortante</h4>
+                        <p class="card-item-description">
+                            Narrativas focadas no detalhe técnico e vivências reais, transformando erros milimétricos em
+                            aprendizado valioso.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item john-card">
+                    <img src="src/images/john_bastidores3.jpg" alt="Visual" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Identidade Fosca</h4>
+                        <p class="card-item-description">
+                            A estética visual do encarte e clipes usa pouca luz, texturas foscas e o contraste do
+                            vermelho sangue contra o asfalto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu2">
+            <h2 class="section-title">O Impacto das Linhas</h2>
+            <h3 class="section-subtitle">A recepção crítica do trabalho mais íntimo e cirúrgico do John.</h3>
+
+            <div class="critica-grid">
+                <div class="critica-card john-card">
+                    <div class="critica-header">
+                        <span class="critico-nome">Portal Rimas Urbanas</span>
+                        <span class="nota">9.2/10</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Na Trave é cirúrgico. John entrega um lirismo cru, pesado, sem rodeios e perfeitamente casado
+                        com uma das melhores seleções de beats do ano."
+                    </p>
+                </div>
+
+                <div class="critica-card john-card">
+                    <div class="critica-header">
+                        <span class="critico-nome">Metrópole Sonora</span>
+                        <span class="nota">★★★★★</span>
+                    </div>
+                    <p class="critica-texto">
+                        "O contraste do vermelho fosco na identidade resume bem a música: é quente, é orgânico, mas
+                        mantém o pé no chão rígido e frio da realidade."
+                    </p>
+                </div>
+
+                <div class="critica-card john-card">
+                    <div class="critica-header">
+                        <span class="critico-nome">Grave da Quebrada</span>
+                        <span class="nota">★★★★☆</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Destaque para o ritmo impecável. Um álbum que acerta precisamente ao rimar sobre as vezes em
+                        que quase se chegou lá."
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fa-solid fa-crosshairs"></i>
+                <span>Discografias</span>
+            </div>
+            <p class="footer-text">
+                "Bater na trave só dá mais vontade de chutar de novo."
+                <br>
+                Portfólio musical desenvolvido com foco em performance e estética Underground.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:rafasyang7@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/johnscript.js"></script>
+    <script src="src/javascript/capa.js"></script>
+</body>
+
+</html>

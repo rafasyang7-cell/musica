@@ -1,0 +1,252 @@
+/* ================= STYLE.CSS - GLOBAL ARIANA ================= */
+
+/* ================= GOOGLE FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght=0,400;0,700;1,400&display=swap');
+
+/* ================= VARIÁVEIS GLOBAIS - SWEETENER ================= */
+:root {
+    --font-titles: "Special Gothic Expanded One", sans-serif;
+    --font-text: 'Lora', serif;
+
+    --bg-sweetener: #efe7db;
+    --bg-cards: #f6eee3;
+
+    --accent-lavender: #a79bcf;
+    --accent-peach: #d4b18f;
+    --accent-cream: #fff7ef;
+
+    --color-dark: #2f2a27;
+    --color-gray: #6f6661;
+    --white-ice: #fffaf4;
+
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --shadow-sweetener: 0 12px 35px rgba(163, 140, 198, 0.14);
+
+    --glass-effect: rgba(255, 255, 255, 0.28);
+    --glass-border: rgba(255, 255, 255, 0.35);
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+/* ================= BODY ================= */
+body {
+    background: linear-gradient(180deg, #f8f1e8 0%, #eee4d7 40%, #e5dacd 100%);
+    color: var(--color-dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-sweetener);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-peach);
+    border-radius: 10px;
+}
+
+/* ================= TIPOGRAFIA ================= */
+h1,
+h2,
+h3,
+.section-title,
+.nota {
+    font-family: var(--font-titles);
+    text-transform: lowercase;
+    letter-spacing: -1px;
+}
+
+p,
+.critica-texto,
+.description,
+.critico-nome,
+.nav-item a {
+    font-family: var(--font-text);
+}
+
+/* ================= SEÇÕES ================= */
+section {
+    width: 100%;
+    padding: 100px 10%;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--color-dark);
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--color-gray);
+    margin-bottom: 70px;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 70px auto;
+}
+
+/* ================= BOTÕES ================= */
+.btn-default {
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: var(--color-dark);
+    padding: 8px 18px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-family: var(--font-titles);
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.btn-default:hover {
+    background: linear-gradient(135deg, #c6b5ff, #dcbaff) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(165, 155, 199, 0.28);
+}
+
+/* ========================================================= */
+/* CARDS SWEETENER */
+/* ========================================================= */
+.sweetener-card {
+    background: linear-gradient(145deg, rgba(255, 248, 241, 0.96), rgba(243, 231, 217, 0.92));
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 14px 35px rgba(185, 161, 214, 0.12);
+    transition: var(--transition-smooth);
+}
+
+.sweetener-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 50px rgba(185, 161, 214, 0.2);
+}
+
+/* ========================================================= */
+/* FOOTER */
+/* ========================================================= */
+#footer {
+    background: linear-gradient(180deg, #e8ddd0, #ddd1c3);
+    padding: 80px 10% 40px;
+    border-top: 1px solid rgba(165, 155, 199, 0.25);
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-brand {
+    font-family: var(--font-titles);
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: lowercase;
+}
+
+.footer-text {
+    max-width: 500px;
+    color: var(--color-gray);
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.32);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--color-dark);
+    font-size: 1.1rem;
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    background: linear-gradient(135deg, #c6b2ff, #ddb7ff);
+    color: white;
+    transform: translateY(-4px) scale(1.05);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+/* ========================================================= */
+/* RESPONSIVO */
+/* ========================================================= */
+@media screen and (max-width: 992px) {
+    section {
+        padding: 90px 6%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .btn-default {
+        padding: 8px 14px;
+        font-size: 0.65rem;
+    }
+}

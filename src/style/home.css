@@ -1,0 +1,589 @@
+/* ================= HOME.CSS - ERA SWEETENER ================= */
+
+/* ========================================================= */
+/* HERO */
+/* ========================================================= */
+
+#home {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 100vh;
+
+    padding: 140px 10% 80px 10%;
+
+    background:
+        linear-gradient(135deg,
+            #f6eee4 0%,
+            #fff7ee 45%,
+            hsl(35, 43%, 89%) 100%);
+
+    gap: 60px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* brilho suave sweetener */
+#home::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background:
+        radial-gradient(circle,
+            rgba(220, 194, 255, 0.18) 0%,
+            transparent 70%);
+
+    top: -120px;
+    right: -120px;
+
+    z-index: 0;
+}
+
+#home::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background:
+        radial-gradient(circle,
+            rgba(255, 214, 179, 0.15) 0%,
+            transparent 70%);
+
+    bottom: -150px;
+    left: -100px;
+
+    z-index: 0;
+}
+
+#cta,
+#banner {
+    position: relative;
+    z-index: 2;
+}
+
+#cta {
+    flex: 1;
+    max-width: 550px;
+}
+
+#cta .title {
+
+    font-size: clamp(3rem, 7vw, 5rem);
+
+    color: var(--color-dark);
+
+    line-height: 0.9;
+
+    margin-bottom: 25px;
+
+    font-family: var(--font-titles);
+
+    font-weight: 700;
+
+    text-transform: lowercase;
+
+    letter-spacing: -3px;
+}
+
+#cta .description {
+
+    font-family: var(--font-text);
+
+    font-size: 1.08rem;
+
+    color: var(--color-gray);
+
+    margin-bottom: 40px;
+
+    line-height: 1.9;
+}
+
+/* ========================================================= */
+/* BOTÃO */
+/* ========================================================= */
+
+.btn-more {
+
+    font-family: var(--font-titles);
+
+    text-transform: lowercase;
+
+    text-decoration: none;
+
+    color: var(--color-dark);
+
+    border-bottom: 2px solid var(--accent-lavender);
+
+    padding-bottom: 5px;
+
+    font-size: 1rem;
+
+    transition: all 0.35s ease;
+
+    display: inline-block;
+}
+
+.btn-more:hover {
+
+    color: var(--accent-lavender);
+
+    padding-left: 12px;
+}
+
+/* ========================================================= */
+/* CAPA */
+/* ========================================================= */
+
+#banner {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    perspective: 1000px;
+}
+
+.album-wrapper {
+
+    width: 380px;
+
+    aspect-ratio: 1 / 1;
+
+    position: relative;
+
+    transition:
+        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.album-wrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -15px;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(199, 175, 255, 0.18),
+            rgba(255, 213, 170, 0.18));
+
+    filter: blur(25px);
+
+    z-index: -1;
+}
+
+.upside-down img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    transform: rotate(180deg);
+
+    box-shadow:
+        0 25px 45px rgba(167, 142, 201, 0.22);
+
+    transition:
+        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+    image-rendering: -webkit-optimize-contrast;
+
+    backface-visibility: hidden;
+}
+
+.upside-down:hover img {
+
+    transform:
+        rotate(0deg) scale(1.05);
+}
+
+/* ========================================================= */
+/* TITULOS */
+/* ========================================================= */
+
+.section-title {
+
+    font-family: var(--font-titles);
+
+    font-size: 2.5rem;
+
+    text-align: center;
+
+    color: var(--color-dark);
+
+    margin-bottom: 10px;
+
+    text-transform: lowercase;
+}
+
+.section-subtitle {
+
+    font-family: var(--font-text);
+
+    font-size: 1.1rem;
+
+    text-align: center;
+
+    color: var(--color-gray);
+
+    margin-bottom: 60px;
+}
+
+/* ========================================================= */
+/* CONCEITO */
+/* ========================================================= */
+
+#menu {
+
+    background:
+        linear-gradient(180deg,
+            #fffaf3,
+            #f5ebdf);
+
+    padding: 100px 10%;
+}
+
+.menu-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+}
+
+/* CARD COM CORES MAIS SWEETENER */
+.menu-item {
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    transition:
+        all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 248, 241, 0.95),
+            rgba(240, 226, 213, 0.92));
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 12px 35px rgba(185, 160, 214, 0.14);
+}
+
+.menu-item:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(185, 160, 214, 0.22);
+}
+
+.menu-img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.menu-details {
+    padding: 30px;
+}
+
+.card-item-title {
+
+    font-family: var(--font-titles);
+
+    font-size: 1.4rem;
+
+    margin-bottom: 12px;
+
+    color: var(--color-dark);
+}
+
+.card-item-description {
+
+    font-family: var(--font-text);
+
+    color: var(--color-gray);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+/* ========================================================= */
+/* CRÍTICA */
+/* ========================================================= */
+
+#menu2 {
+
+    background:
+        linear-gradient(to bottom,
+            #fdf7ef,
+            #eee2d4);
+
+    padding: 100px 10%;
+}
+
+.critica-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+/* CARDS CRÍTICA COM NOVA ESTÉTICA */
+.critica-card {
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 249, 243, 0.93),
+            rgba(241, 228, 214, 0.88));
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+        0 12px 38px rgba(188, 165, 214, 0.14);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: all 0.4s ease;
+}
+
+.critica-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(188, 165, 214, 0.22);
+}
+
+.critica-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.critica-logo {
+
+    max-width: 90px;
+
+    height: 25px;
+
+    object-fit: contain;
+
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.nota {
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    color: white;
+
+    background:
+        linear-gradient(135deg,
+            #b49bdf,
+            #d9b6ff);
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 15px rgba(180, 155, 223, 0.25);
+}
+
+.critica-texto {
+
+    font-family: var(--font-text);
+
+    font-style: italic;
+
+    color: var(--color-dark);
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+.critico-nome {
+
+    font-family: var(--font-titles);
+
+    font-size: 0.8rem;
+
+    color: var(--color-gray);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+/* ========================================================= */
+/* ANIMAÇÕES */
+/* ========================================================= */
+
+.scroll-animate {
+
+    opacity: 0;
+
+    will-change:
+        transform,
+        opacity;
+
+    transition:
+        opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.from-bottom {
+    transform: translateY(40px);
+}
+
+.from-left {
+    transform: translateX(-50px);
+}
+
+.from-right {
+    transform: translateX(50px);
+}
+
+.scroll-animate.show {
+
+    opacity: 1;
+
+    transform:
+        translate(0) rotate(0);
+}
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+/* ========================================================= */
+/* RESPONSIVIDADE */
+/* ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    #home {
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding-top: 160px;
+
+        gap: 40px;
+    }
+
+    #cta .description {
+        margin: 0 auto 40px auto;
+    }
+
+    .album-wrapper {
+        width: 280px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .from-left,
+    .from-right {
+
+        transform:
+            translateY(30px) translateX(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #home {
+        padding: 160px 6% 80px;
+    }
+
+    .menu-container,
+    .critica-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item,
+    .critica-card {
+        border-radius: 24px;
+    }
+
+    .menu-details,
+    .critica-card {
+        padding: 25px;
+    }
+}

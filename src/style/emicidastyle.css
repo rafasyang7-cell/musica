@@ -1,0 +1,268 @@
+/* ================= EMICIDASTYLE.CSS - GLOBAL EMICIDA ================= */
+
+/* ================= GOOGLE FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ================= VARIÁVEIS GLOBAIS EMICIDA ================= */
+
+:root {
+    --font-titles: "Special Gothic Expanded One", sans-serif;
+    --font-body: 'Lora', serif;
+
+    /* 🎨 Paleta SCQPL - Cores Terrosas e Ancestrais */
+    --bg-emicida: #1a1412;
+    --bg-cards: #251e1b;
+    --accent-emicida: #bc8a5f;
+    /* Tom Ouro Velho/Terra */
+    --accent-glow: rgba(188, 138, 95, 0.2);
+    --text-light: #f4ece2;
+    --color-gray: #a39589;
+
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-emicida);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-emicida);
+    border-radius: 10px;
+}
+
+body {
+    background-color: var(--bg-emicida);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ================= TIPOGRAFIA ================= */
+h1,
+h2,
+h3,
+.menu-title,
+.card-item-title,
+.section-title {
+    font-family: var(--font-titles);
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.nota {
+    font-family: var(--font-titles);
+    background-color: var(--accent-color) !important;
+    color: #fff !important;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: inline-block;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+p,
+.critica-texto,
+.description,
+.critico-nome,
+.card-item-description {
+    font-family: var(--font-text);
+    letter-spacing: 0.3px;
+}
+
+/* ================= ESTRUTURA DE SEÇÕES ================= */
+section {
+    width: 100%;
+    padding: 100px 10%;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--accent-color);
+    margin: 0 auto 70px auto;
+    font-style: italic;
+    max-width: 700px;
+}
+
+/* ================= BOTÃO / SELETOR DE ÁLBUNS (BOLINHAS) ================= */
+.album-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-default {
+    background-color: transparent;
+    color: var(--text-light);
+    padding: 10px 22px;
+    border: 1px solid rgba(188, 138, 95, 0.3);
+    cursor: pointer;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font-titles);
+}
+
+.btn-default:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    color: #1a1412 !important;
+}
+
+.active-album {
+    background-color: var(--accent-color) !important;
+    color: #fff !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+/* ================= CARDS CONCEITO & CRÍTICA ================= */
+.critica-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.critica-card {
+    background-color: var(--bg-cards);
+    padding: 30px;
+    border-radius: 25px;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(188, 138, 95, 0.1);
+}
+
+.critica-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-emicida);
+    box-shadow: 0 15px 40px rgba(188, 138, 95, 0.08);
+    /* Brilho sutil no card de crítica */
+}
+
+.critica-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.critica-logo {
+    max-width: 120px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.nota {
+    font-weight: bold;
+    color: var(--accent-emicida);
+    font-size: 0.9rem;
+}
+
+.critica-texto {
+    font-size: 0.95rem;
+    color: var(--color-gray);
+    margin-bottom: 20px;
+}
+
+.critico-nome {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+/* ================= RODAPÉ (FOOTER CENTRALIZADO) ================= */
+#footer {
+    background-color: #14100e;
+    padding: 80px 10% 40px;
+    border-top: 1px solid rgba(188, 138, 95, 0.05);
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-titles);
+    color: var(--text-light);
+    font-size: 1.5rem;
+}
+
+.footer-brand i {
+    color: var(--accent-emicida);
+}
+
+.footer-text {
+    color: var(--color-gray);
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-socials a {
+    color: var(--color-gray);
+    font-size: 1.4rem;
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    color: var(--accent-emicida);
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 8px var(--accent-emicida));
+    /* Efeito de brilho nas redes sociais */
+}
+
+
+.footer-copyright {
+    width: 100%;
+    font-size: 0.8rem;
+    color: #554a43;
+    border-top: 1px solid rgba(188, 138, 95, 0.05);
+    padding-top: 30px;
+    margin-top: 20px;
+}

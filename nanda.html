@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NandaTsunami | É Disso Que Eu Me Alimento</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style/nandastyle.css">
+    <link rel="stylesheet" href="src/style/nandaheader.css">
+    <link rel="stylesheet" href="src/style/nandahome.css">
+
+    <!-- SCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="nanda-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 5px 0;">
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link active-artist"><i class="fa-solid fa-ranking-star"></i>
+                NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link active-artist"><i class="fa-solid fa-crosshairs"></i> John</a>
+        </nav>
+    </aside>
+    </aside>
+
+    <header>
+        <nav id="navbar">
+
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-ranking-star animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="#home">álbum</a></li>
+                    <li class="nav-item"><a href="#menu">conceito</a></li>
+                    <li class="nav-item"><a href="#menu2">crítica</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir seções" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+
+        <div id="mobile_menu" role="menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Álbum</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#menu">Conceito</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#menu2">Crítica</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <!-- HERO -->
+        <section id="home">
+
+            <div id="cta" class="scroll-animate from-left">
+
+                <h1 class="title">
+                    É disso que eu me alimento
+                </h1>
+
+                <p class="description">
+                    No seu primeiro álbum completo, NandaTsunami transforma
+                    experiências ruins e vulnerabilidade em força.
+
+                    O projeto é uma travessia emocional contada faixa por faixa.
+                    Nele, a artista expõe as múltiplas camadas de um amor que
+                    mesmo quando fere, alimenta.
+
+                    Com sonoridade centrada no trap mas que se expande em direção
+                    ao bounce, afrobeat e house o disco simboliza uma jornada do
+                    caos à cura.
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-more">
+                        Explorar cada rima
+                    </a>
+                </div>
+            </div>
+
+            <div id="banner" class="scroll-animate from-right">
+
+                <div class="album-wrapper tsunami-animation">
+
+                    <a href="https://open.spotify.com" target="_blank" rel="noopener" title="Ouvir no Spotify">
+
+                        <img src="src/images/nanda album.avif" alt="Capa do álbum É Disso Que Eu Me Alimento">
+
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCEITO -->
+        <section id="menu">
+
+            <h2 class="section-title scroll-animate from-bottom">
+                a fome de criar
+            </h2>
+
+            <h3 class="section-subtitle scroll-animate from-bottom">
+                Projeto autoral que explora as fases do amor,
+                cura e autoconhecimento.
+            </h3>
+
+            <div class="menu-container">
+
+                <div class="menu-item scroll-animate from-bottom delay-1">
+
+                    <img src="src/images/conceito nanda.jpg" alt="Conceito Visual" class="menu-img">
+
+                    <div class="menu-details">
+                        <h4 class="card-item-title">
+                            conceito e identidade
+                        </h4>
+
+                        <p class="card-item-description">
+                            Evolução pessoal e espiritual respondendo
+                            "Que gosto tem o amor?".
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-animate from-bottom delay-2">
+
+                    <img src="src/images/CONCEITO 2 NANDA.webp" alt="Produção" class="menu-img">
+
+                    <div class="menu-details">
+                        <h4 class="card-item-title">
+                            produção sonora
+                        </h4>
+
+                        <p class="card-item-description">
+                            Mistura de trap e funk com sonoridade
+                            potente e visceral.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-animate from-bottom delay-3">
+
+                    <img src="src/images/foto nanda.jfif" alt="Lírica" class="menu-img">
+
+                    <div class="menu-details">
+                        <h4 class="card-item-title">
+                            composição
+                        </h4>
+
+                        <p class="card-item-description">
+                            Inspirada por diários e desilusões,
+                            um espelho da alma da artista.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CRÍTICA -->
+        <section id="menu2">
+
+            <h2 class="section-title scroll-animate from-bottom">
+                O veredito das ruas e das telas
+            </h2>
+
+            <h3 class="section-subtitle scroll-animate from-bottom">
+                O reconhecimento de uma obra que consolidou
+                a Tsunami no cenário nacional.
+            </h3>
+
+            <div class="critica-grid">
+
+                <div class="critica-card scroll-animate from-bottom delay-1">
+
+                    <div class="critica-header">
+
+                        <img src="src/images/Trace_Brasil_logo.png" alt="Logo Trace" class="critica-logo">
+
+                        <span class="nota">
+                            ★★★★★ (5/5)
+                        </span>
+                    </div>
+
+                    <p class="critica-texto">
+                        "Jornada sobre as fases do amor e da cura,
+                        ressaltando o tom confessional de diário."
+                    </p>
+
+                    <span class="critico-nome">
+                        Trace.tv Brasil
+                    </span>
+                </div>
+
+                <div class="critica-card scroll-animate from-bottom delay-2">
+
+                    <div class="critica-header">
+
+                        <img src="src/images/logo radar.jpg" alt="Logo Radar" class="critica-logo">
+
+                        <span class="nota">
+                            ★★★★☆ (4/5)
+                        </span>
+                    </div>
+
+                    <p class="critica-texto">
+                        "Visualmente impecável e sonoramente corajoso.
+                        Um marco na carreira da artista."
+                    </p>
+
+                    <span class="critico-nome">
+                        Radar Musical
+                    </span>
+                </div>
+
+                <div class="critica-card scroll-animate from-bottom delay-3">
+
+                    <div class="critica-header">
+
+                        <img src="src/images/ZZZZZZZ.png" alt="Logo Rap" class="critica-logo">
+
+                        <span class="nota">
+                            ★★★★☆ (4/5)
+                        </span>
+                    </div>
+
+                    <p class="critica-texto">
+                        "Nandatsunami prova que a vulnerabilidade
+                        é o tempero mais forte do rap atual."
+                    </p>
+
+                    <span class="critico-nome">
+                        Portal Rap Nacional
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <i class="fa-solid fa-ranking-star"></i>
+                <span>Discografias</span>
+            </div>
+
+            <p class="footer-text">
+                "O amor é uma coisa que a gente sente sozinho."
+
+                <br><br>
+
+                Projeto desenvolvido para portfólio,
+                unindo design e paixão por música.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener">
+
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rafaela-syang-80185b272/" target="_blank" rel="noopener">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="mailto:rafasyang7@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por
+                <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="src/javascript/nandascript.js"></script>
+
+</body>
+
+</html>

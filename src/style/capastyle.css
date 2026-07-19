@@ -1,0 +1,254 @@
+/* capastyle.css — tema claro, "catálogo de vinil" */
+
+/* ================= GOOGLE FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* ================= VARIÁVEIS ================= */
+:root {
+    --font-titles: "Syne", sans-serif;
+    --font-body: "Plus Jakarta Sans", sans-serif;
+
+    --bg-main: #f7f1e4;
+    --bg-elements: #efe4d0;
+    --bg-card: rgba(255, 255, 255, 0.55);
+
+    --accent-color: #c1602c;
+    --accent-soft: rgba(193, 96, 44, 0.1);
+    --accent-glow: rgba(193, 96, 44, 0.22);
+
+    --text-white: #2b241c;
+    /* nome mantido por compatibilidade, agora é o texto escuro principal */
+    --text-gray: rgba(43, 36, 28, 0.55);
+    --border: rgba(43, 36, 28, 0.12);
+
+    --transition-global: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ================= RESET ================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body.capa-theme {
+    background-color: var(--bg-main);
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(193, 96, 44, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(58, 122, 109, 0.05) 0%, transparent 45%);
+    color: var(--text-white);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+#sidebar_menu {
+    position: fixed;
+    top: 0;
+    left: -340px;
+    width: 320px;
+    height: 100vh;
+    background: #fbf6ea;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-right: 1px solid var(--border);
+    z-index: 2000;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow: 4px 0 40px rgba(43, 36, 28, 0.1);
+    overflow: hidden;
+}
+
+#sidebar_menu.open {
+    left: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 24px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-titles);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-gray);
+}
+
+.sidebar-title i {
+    color: var(--accent-color);
+    font-size: 0.75rem;
+}
+
+#close_sidebar {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-global);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close_sidebar:hover {
+    color: var(--text-white);
+    border-color: rgba(43, 36, 28, 0.25);
+    transform: rotate(90deg);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 16px 12px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 14px;
+    border-radius: 12px;
+    color: rgba(43, 36, 28, 0.65);
+    border: 1px solid transparent;
+    transition: var(--transition-global);
+    position: relative;
+}
+
+.link-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(43, 36, 28, 0.04);
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+    transition: var(--transition-global);
+}
+
+.link-icon i {
+    font-size: 0.85rem;
+    color: var(--link-color, #2b241c);
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+.link-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.link-text strong {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(43, 36, 28, 0.9);
+    line-height: 1;
+}
+
+.link-text small {
+    font-size: 0.7rem;
+    color: var(--text-gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.link-arrow {
+    font-size: 0.65rem;
+    color: var(--text-gray);
+    opacity: 0;
+    transition: var(--transition-global);
+    flex-shrink: 0;
+}
+
+.sidebar-link:hover {
+    background: rgba(43, 36, 28, 0.04);
+    border-color: rgba(43, 36, 28, 0.1);
+    color: var(--text-white);
+    transform: translateX(4px);
+}
+
+.sidebar-link:hover .link-icon {
+    background: color-mix(in srgb, var(--link-color, #2b241c) 14%, transparent);
+    border-color: var(--link-color, #2b241c);
+}
+
+.sidebar-link:hover .link-icon i {
+    opacity: 1;
+}
+
+.sidebar-link:hover .link-arrow {
+    opacity: 1;
+    color: var(--link-color, #2b241c);
+}
+
+.sidebar-link.active-here {
+    background: color-mix(in srgb, var(--link-color, #2b241c) 10%, transparent);
+    border-color: color-mix(in srgb, var(--link-color, #2b241c) 30%, transparent);
+}
+
+/* ================= OVERLAY ================= */
+#blury_overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(43, 36, 28, 0);
+    z-index: 1999;
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    transition:
+        opacity 0.4s ease,
+        backdrop-filter 0.4s ease,
+        background 0.4s ease;
+}
+
+#blury_overlay.visible {
+    opacity: 1;
+    visibility: visible;
+    background: rgba(43, 36, 28, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media screen and (max-width: 768px) {
+    #sidebar_menu {
+        width: 85vw;
+        left: -90vw;
+    }
+}

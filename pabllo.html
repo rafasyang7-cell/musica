@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pabllo Vittar | Batidão Tropical Vol. 2</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style/pabllostyle.css">
+    <link rel="stylesheet" href="src/style/pablloheader.css">
+    <link rel="stylesheet" href="src/style/pabllohome.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="pabllo-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,248,240,0.08); margin: 5px 0;">
+
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link active-artist"><i class="fa-solid fa-ranking-star"></i>
+                NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link active-artist"><i class="fa-solid fa-crosshairs"></i> John</a>
+        </nav>
+    </aside>
+
+    <header>
+        <nav id="navbar">
+
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-sun animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active">
+                        <a href="#home">álbum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#conceito">conceito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#critica">crítica</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir menu" aria-haspopup="true" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu" role="menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home" role="menuitem">álbum</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#conceito" role="menuitem">conceito</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#critica" role="menuitem">crítica</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="home">
+            <div id="cta" class="scroll-animate from-left">
+                <h1 class="title">Batidão Tropical Vol. 2</h1>
+                <p class="description">
+                    Lançado em abril de 2024, Batidão Tropical Vol. 2 é o sexto álbum de Pabllo Vittar. O projeto
+                    celebra as raízes musicais do Norte e Nordeste brasileiro através do tecnobrega, forró e calypso
+                    unidos ao pop contemporâneo. Mesclando regravações nostálgicas de hinos de sua infância com faixas
+                    inéditas, o disco consolida a artista como uma das maiores vitrines da riqueza cultural das
+                    periferias do país.
+                </p>
+                <div id="cta_buttons">
+                    <a href="#conceito" class="btn-more">explorar o batidão</a>
+                </div>
+            </div>
+
+            <div id="banner" class="scroll-animate from-right">
+                <div class="album-wrapper pabllo-animation">
+                    <a href="https://open.spotify.com/intl-pt/album/4vWvJUynYR1cdGjyyWGeei" target="_blank"
+                        rel="noopener" title="Ouvir no Spotify">
+                        <img src="src/images/capa-pablo-vittar.webp"
+                            alt="Capa do álbum Batidão Tropical Vol. 2 da Pabllo Vittar">
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="conceito">
+            <h2 class="section-title scroll-animate from-bottom">patrimônio das pistas</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">
+                O reencontro definitivo com as lendas e ritmos que formaram a maior drag queen do pop.
+            </h3>
+
+            <div class="menu-container">
+
+                <div class="menu-item scroll-animate from-bottom delay-1">
+                    <img src="src/images/face card.jfif" alt="Regravações Icônicas" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Amor eterno</h4>
+                        <p class="card-item-description">O álbum é um manifesto de amor às regiões Norte e Nordeste,
+                            resgatando clássicos que embalaram a infância da artista quando ela morou no Pará e no
+                            Maranhão.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-animate from-bottom delay-2">
+                    <img src="src/images/braco.jpg" alt="Estética Nordestina" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Estratégia e diversão</h4>
+                        <p class="card-item-description">No lançamento oficial, as faixas 8, 10 e 14 estavam
+                            indisponíveis "bloqueadas". No lugar das músicas, os fãs ouviam áudios divertidos da
+                            Pabllo explicando que eram surpresas para depois.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-animate from-bottom delay-3">
+                    <img src="src/images/show.jfif" alt="Aclamação Nacional" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">festa e legado</h4>
+                        <p class="card-item-description">Mais do que uma sequência, o Vol. 2 consolida o papel de Pabllo
+                            Vittar como uma das principais agentes de preservação e difusão do pop regional brasileiro
+                            no mainstream.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="critica">
+            <h2 class="section-title scroll-animate from-bottom">Além do topo das paradas</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">
+                Veja as notas e análises que consagraram este um espetáculo de ritmo.
+            </h3>
+
+            <div class="critica-grid">
+
+                <div class="critica-card scroll-animate from-bottom delay-1">
+                    <div class="critica-header">
+                        <img src="src/images/logo print.png" alt="Persona Jornalismo Cultural" class="critica-logo">
+                        <span class="nota">★★★★★</span>
+                    </div>
+                    <p class="critica-texto">"Batidão Tropical Vol. 2 é considerado um dos melhores álbuns de Pabllo
+                        Vittar. Sua versatilidade e habilidade de referenciar alguns dos nomes mais importantes da
+                        música nortista e nordestina do país dão um significado muito importante em sua composição"</p>
+                    <span class="critico-nome">Persona | Jornalismo Cultural</span>
+                </div>
+
+                <div class="critica-card scroll-animate from-bottom delay-2">
+                    <div class="critica-header">
+                        <img src="src/images/deezer.webp" alt="Comunidade Deezer" class="critica-logo">
+                        <span class="nota">9.2/10</span>
+                    </div>
+                    <p class="critica-texto">"Com maestria, o Batidão Tropical Vol. 2 demonstra que Pabllo Vittar
+                        consegue transitar naturalmente entre diferentes ritmos da música [...]. A versatilidade de
+                        Pabllo Vittar faz a artista despontar como um dos principais nomes da música brasileira
+                        contemporânea"</p>
+                    <span class="critico-nome">Comunidade Deezer</span>
+                </div>
+
+                <div class="critica-card scroll-animate from-bottom delay-3">
+                    <div class="critica-header">
+                        <img src="src/images/bilbord.png" alt="Billboard Brasil" class="critica-logo">
+                        <span class="nota">Essencial</span>
+                    </div>
+                    <p class="critica-texto">"Na segunda edição de projeto que celebra os gêneros do Nordeste e suas
+                        divas, Pabllo Vittar retorna mais autêntica e romântica como nunca"</p>
+                    <span class="critico-nome">Billboard Brasil</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span>Discografias</span>
+                <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <p class="footer-text">
+                <em>"Eu amo você, mas amo mais a minha liberdade."</em>
+                <br>
+                Projeto desenvolvido para portfólio, unindo design e paixão por música.
+            </p>
+
+            <div class="footer-socials">
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rafaela-syang-80185b272/" target="_blank" rel="noopener"
+                    title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:rafasyang7@gmail.com" title="E-mail">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/pablloscript.js"></script>
+</body>
+
+</html>

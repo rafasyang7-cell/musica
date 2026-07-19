@@ -1,0 +1,236 @@
+<!-- tasha.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasha & Tracie | Serena e Vênus</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style/tashastyle.css">
+    <link rel="stylesheet" href="src/style/tashaheader.css">
+    <link rel="stylesheet" href="src/style/tashahome.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="tasha-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(240,238,255,0.08); margin: 5px 0;">
+
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link"><i class="fa-solid fa-ranking-star"></i> NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link active-artist"><i class="fa-solid fa-gem"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link"><i class="fa-solid fa-crosshairs"></i> John</a>
+
+        </nav>
+    </aside>
+
+    <header>
+        <nav id="navbar">
+
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-moon animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="#home">Álbum</a></li>
+                    <li class="nav-item"><a href="#conceito">conceito</a></li>
+                    <li class="nav-item"><a href="#critica">crítica</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">álbum</a></li>
+                <li class="nav-item"><a href="#conceito">conceito</a></li>
+                <li class="nav-item"><a href="#critica">crítica</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <!-- HOME -->
+        <section id="home">
+            <div id="cta" class="scroll-animate from-left">
+                <h1 class="title">serena e vênus</h1>
+                <p class="description">
+                    O projeto é uma obra conceitual e madura que consegue misturar rap, R&B, funk e house. Ao longo de
+                    21 faixas, as
+                    artistas narram a história dramática de uma mulher que entra para o crime por amor, enfrenta a
+                    prisão e vive o abandono do sistema carcerário.
+                </p>
+                <div id="cta_buttons">
+                    <a href="#conceito" class="btn-more">entrar para irmandade</a>
+                </div>
+            </div>
+
+            <div id="banner" class="scroll-animate from-right">
+                <div class="album-wrapper tasha-animation">
+                    <a href="https://open.spotify.com" target="_blank" rel="noopener" title="Ouvir no Spotify">
+                        <img src="src/images/serena e venus album.jpg" alt="Capa do álbum Serena e Vênus">
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCEITO -->
+        <section id="conceito">
+            <h2 class="section-title scroll-animate from-bottom">A Cultura de Rua</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">
+                O álbum resgata vivências sensíveis para debater afeto, sobrevivência e a realidade
+                das prisões femininas no Brasil.
+            </h3>
+
+            <div class="menu-container">
+                <div class="menu-item scroll-animate from-bottom delay-1">
+                    <img src="src/images/paiaço.jfif" alt="As Irmãs Williams" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">As Irmãs Williams</h4>
+                        <p class="card-item-description">O título homenageia Serena e Venus Williams, que saíram da
+                            violenta Compton (EUA) para revolucionar um esporte de elite dominado por brancos.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-animate from-bottom delay-2">
+                    <img src="src/images/passa porte.jfif" alt="O Espelho de Tasha & Tracie" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">O Espelho de Tasha & Tracie</h4>
+                        <p class="card-item-description">A dupla usa essa jornada como analogia à própria vida na Zona
+                            Norte de São Paulo, provando que a união inabalável de duas mulheres pretas é capaz de
+                            construir impérios e superar a escassez de recursos.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-animate from-bottom delay-3">
+                    <img src="src/images/elas.jpg" alt="A Simpatia por Amor" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">A "Simpatia" por Amor</h4>
+                        <p class="card-item-description">A personagem central mergulha no crime por uma paixão
+                            avassaladora, ilustrada em faixas como "Simpatia" (onde faz uma simpatia com mel para o
+                            romance dar certo), culminando na sua desilusão e prisão</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CRÍTICA -->
+        <section id="critica">
+            <h2 class="section-title scroll-animate from-bottom">Opinião da crítica</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">
+                Entre a poesia e a denúncia: O que a crítica diz sobre a crônica sonora das gêmeas
+            </h3>
+
+            <div class="critica-grid">
+                <div class="critica-card scroll-animate from-bottom delay-1">
+                    <div class="critica-header">
+                        <img src="src/images/colab.png" alt="Veículo 1" class="critica-logo">
+                        <span class="nota">10/10</span>
+                    </div>
+                    <p class="critica-texto">"O álbum não é apenas uma coleção de músicas, mas um manifesto ambicioso
+                        que mergulha em questões de resistência, afeto e a realidade da mulher periférica no Brasil. O
+                        nome do álbum, Serena & Vênus, demonstra profundidade cultural e conceitual."</p>
+                    <span class="critico-nome">Portal Colab (PUC Minas)</span>
+                </div>
+
+                <div class="critica-card scroll-animate from-bottom delay-2">
+                    <div class="critica-header">
+                        <img src="src/images/nois.png" alt="Veículo 2" class="critica-logo">
+                        <span class="nota">★★★★★</span>
+                    </div>
+                    <p class="critica-texto">"Após se destacarem nos últimos anos, Tasha & Trcie apresentam 'Serena &
+                        Venus (Lado A)', o primeiro álbum da carreira é inspirado pelo 'rap gótico' noventista e
+                        conceitual."</p>
+                    <span class="critico-nome">Revista Noize</span>
+                </div>
+
+                <div class="critica-card scroll-animate from-bottom delay-3">
+                    <div class="critica-header">
+                        <img src="src/images/pp.png" alt="Veículo 3" class="critica-logo">
+                        <span class="nota">Sucesso Absoluto</span>
+                    </div>
+                    <p class="critica-texto">""O álbum se constrói como uma verdadeira crônica sonora: um mosaico de
+                        memórias afetivas, referências visuais e musicais e narrativas que atravessam a vida das irmãs.
+                        [...] O álbum é um verdadeiro manifesto que escancara as contradições de um sistema que
+                        marginaliza e abandona...""</p>
+                    <span class="critico-nome">Portal Pretessências</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fa-solid fa-moon"></i>
+                <span>Discografias</span>
+            </div>
+
+            <p class="footer-text">
+                <em>"Sempre rimo como se o aluguel tivesse atrasado, como se minha vida dependesse disso."</em>
+                <br>
+                Projeto desenvolvido para portfólio, unindo design e paixão por música.
+            </p>
+
+            <div class="footer-socials">
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rafaela-syang-80185b272/" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:rafasyang7@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/tashascript.js"></script>
+</body>
+
+</html>

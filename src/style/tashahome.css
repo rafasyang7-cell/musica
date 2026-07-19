@@ -1,0 +1,304 @@
+/* tashahome.css */
+
+/* ================= HERO ================= */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    gap: 70px;
+    padding-top: 130px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* brilhos celestiais de fundo */
+#home::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(176, 127, 255, 0.1) 0%, transparent 65%);
+    top: -180px;
+    right: -180px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(240, 192, 64, 0.06) 0%, transparent 65%);
+    bottom: -120px;
+    left: -80px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ================= CTA ================= */
+#cta {
+    flex: 1;
+    max-width: 580px;
+    position: relative;
+    z-index: 2;
+}
+
+#cta .title {
+    font-family: var(--font-titles);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+#cta .description {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--color-gray);
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* ================= BOTÃO ================= */
+.btn-more {
+    font-family: var(--font-titles);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    color: var(--accent-tasha);
+    position: relative;
+    padding-bottom: 6px;
+    transition: var(--transition-smooth);
+    display: inline-block;
+}
+
+.btn-more::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: var(--accent-tasha);
+    box-shadow: 0 0 8px var(--accent-tasha);
+    transition: var(--transition-smooth);
+}
+
+.btn-more:hover {
+    letter-spacing: 4px;
+    color: var(--accent-secondary);
+}
+
+.btn-more:hover::after {
+    width: 100%;
+    background: var(--accent-secondary);
+    box-shadow: 0 0 8px var(--accent-secondary);
+}
+
+/* ================= BANNER / CAPA ================= */
+#banner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.album-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px rgba(176, 127, 255, 0.12),
+        0 30px 70px rgba(176, 127, 255, 0.18),
+        0 0 80px rgba(240, 192, 64, 0.05);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.album-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.album-wrapper:hover {
+    transform: scale(1.03) rotate(0.8deg);
+}
+
+/* ================= ANIMAÇÃO "HALO DE VÊNUS" NO CARD DA CAPA ================= */
+/* Um halo dourado orbitando lentamente ao redor da capa, remetendo ao
+   clima celestial/mítico do título "Serena e Vênus". */
+
+.tasha-animation::before {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    border-radius: 50%;
+    border: 1.5px dashed rgba(240, 192, 64, 0.45);
+    pointer-events: none;
+    animation: venusOrbit 14s linear infinite;
+    z-index: -1;
+}
+
+.tasha-animation::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: 22px;
+    background: radial-gradient(circle at 50% 0%, rgba(176, 127, 255, 0.25), transparent 70%);
+    opacity: 0.7;
+    pointer-events: none;
+    animation: venusGlow 5s ease-in-out infinite;
+}
+
+@keyframes venusOrbit {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes venusGlow {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.85;
+    }
+}
+
+/* ================= OVERLAY SPOTIFY ================= */
+.spotify-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 5, 15, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.album-wrapper:hover .spotify-overlay {
+    opacity: 1;
+}
+
+.spotify-overlay i {
+    font-size: 4rem;
+    color: #1DB954;
+    filter: drop-shadow(0 0 15px rgba(29, 185, 84, 0.5));
+}
+
+/* ================= SEÇÃO CONCEITO ================= */
+#conceito {
+    background: linear-gradient(180deg, #06050f, #0a0818);
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 50px;
+}
+
+/* ================= SEÇÃO CRÍTICA ================= */
+#critica {
+    background: linear-gradient(180deg, #0a0818, #06050f);
+}
+
+/* ================= ANIMAÇÕES ================= */
+.scroll-animate {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition:
+        opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.from-bottom {
+    transform: translateY(40px);
+}
+
+.from-left {
+    transform: translateX(-50px);
+}
+
+.from-right {
+    transform: translateX(50px);
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media screen and (max-width: 1100px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 160px;
+        gap: 50px;
+    }
+
+    #cta {
+        max-width: 100%;
+    }
+
+    #cta .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .album-wrapper {
+        max-width: 360px;
+    }
+
+    .from-left,
+    .from-right {
+        transform: translateY(30px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #cta .title {
+        font-size: 2.2rem;
+    }
+
+    .album-wrapper {
+        max-width: 300px;
+    }
+}
