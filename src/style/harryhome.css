@@ -54,6 +54,35 @@
     overflow: hidden;
 }
 
+/* Brilho extra ao redor do card — pulsando por trás da capa, usando
+   a mesma cor --accent-pink já existente. Não altera a animação de
+   flutuação (.floating-art) nem o efeito de mouse já presentes. */
+.album-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -22px;
+    border-radius: 20px;
+    background: radial-gradient(circle, rgba(223, 178, 183, 0.45) 0%, transparent 70%);
+    z-index: -1;
+    opacity: 0.55;
+    animation: harryGlowPulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes harryGlowPulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: scale(0.96);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.04);
+    }
+}
+
 .album-wrapper img {
     width: 100%;
     height: auto;
@@ -167,7 +196,6 @@
     width: auto;
     object-fit: contain;
     filter: grayscale(1) opacity(0.7);
-    /* Deixa a logo elegante e discreta no padrão */
     transition: var(--transition-smooth);
 }
 
@@ -193,6 +221,43 @@
     text-transform: uppercase;
     color: var(--accent-blue);
     letter-spacing: 1px;
+}
+
+/* ================= ANIMAÇÃO DE SURGIMENTO AO ROLAR ================= */
+.scroll-animate {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.from-bottom {
+    transform: translateY(40px);
+}
+
+.from-left {
+    transform: translateX(-50px);
+}
+
+.from-right {
+    transform: translateX(50px);
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
 }
 
 /* RESPONSIVO */

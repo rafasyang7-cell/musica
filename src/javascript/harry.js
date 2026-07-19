@@ -25,15 +25,57 @@ $(document).ready(function () {
        2. CONTROLE DO MENU RESPONSIVO INTERNO (MOBILE)
        ========================================================================== */
     $('#mobile_btn').on('click', function () {
-        $('#mobile_menu').toggleClass('open');
+        $('#mobile_menu').toggleClass('active');
     });
 
     $('#mobile_nav_list a').on('click', function () {
-        $('#mobile_menu').removeClass('open');
+        $('#mobile_menu').removeClass('active');
     });
 
     /* ==========================================================================
-       3. EFEITO INTERATIVO DE DESLOCAMENTO DINÂMICO (PARALAXE) COM O MOUSE
+       3. SIDEBAR DE ARTISTAS (lateral, escondida)
+       ========================================================================== */
+    const sidebar = $('#sidebar_menu');
+    const overlay = $('#blury_overlay');
+
+    $('#sidebar_btn, #toggle_container .arrow-indicator').on('click', function (e) {
+        e.preventDefault();
+        sidebar.addClass('active');
+        overlay.addClass('active');
+        $('body').css('overflow', 'hidden');
+    });
+
+    function closeSidebar() {
+        sidebar.removeClass('active');
+        overlay.removeClass('active');
+        $('body').css('overflow', 'auto');
+    }
+
+    $('#close_sidebar').on('click', closeSidebar);
+    overlay.on('click', closeSidebar);
+
+    $(document).on('keydown', function (e) {
+        if (e.key === 'Escape' && sidebar.hasClass('active')) closeSidebar();
+    });
+
+    /* ==========================================================================
+       4. ANIMAÇÃO DE SURGIMENTO AO ROLAR A TELA
+       ========================================================================== */
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                $(entry.target).addClass('show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { root: null, rootMargin: '0px', threshold: 0.12 });
+
+    $('.scroll-animate').each(function () {
+        scrollObserver.observe(this);
+    });
+
+    /* ==========================================================================
+       5. EFEITO INTERATIVO DE DESLOCAMENTO DINÂMICO (PARALAXE) COM O MOUSE
        ========================================================================== */
     const artContainer = $('.album-wrapper');
     const targetImg = artContainer.find('img');
@@ -42,15 +84,12 @@ $(document).ready(function () {
         const containerWidth = artContainer.outerWidth();
         const containerHeight = artContainer.outerHeight();
 
-        // Obtém o deslocamento do mouse em relação ao centro do container
         const mouseX = event.pageX - artContainer.offset().left - containerWidth / 2;
         const mouseY = event.pageY - artContainer.offset().top - containerHeight / 2;
 
-        // Calcula a movimentação paralaxe (Deslocamento leve de até 10px)
         const moveX = (mouseX / (containerWidth / 2)) * 10;
         const moveY = (mouseY / (containerHeight / 2)) * 10;
 
-        // Pausa temporariamente a animação CSS padrão para rodar o controle do mouse
         artContainer.css('animation-play-state', 'paused');
 
         targetImg.css({
@@ -59,7 +98,6 @@ $(document).ready(function () {
         });
     });
 
-    // Retoma a flutuação normal quando o mouse sai do elemento
     artContainer.on('mouseleave', function () {
         artContainer.css('animation-play-state', 'running');
 

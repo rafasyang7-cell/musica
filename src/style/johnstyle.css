@@ -176,3 +176,55 @@ section {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* ================= CRÍTICAS ================= */
+.critica-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.critica-card {
+    background-color: var(--bg-cards);
+    padding: 35px;
+    border-radius: 24px;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 34, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.critica-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-pabllo);
+    box-shadow: 0 15px 40px rgba(255, 34, 0, 0.12);
+}
+
+.critica-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.critica-logo {
+    max-width: 120px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.nota {
+    font-weight: 700;
+    color: var(--accent-secondary);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.critica-texto {
+    font-size: 0.95rem;
+    color: var(--color-gray);
+    line-height: 1.75;
+    font-style: italic;
+    flex-grow: 1;
+}

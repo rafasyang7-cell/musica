@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="src/style/harryheader.css">
     <link rel="stylesheet" href="src/style/harryhome.css">
 
-    <link rel="stylesheet" href="src/style/capastyle.css">
-    <link rel="stylesheet" href="src/style/capaheader.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
@@ -32,19 +29,18 @@
                 <i class="fa-solid fa-house-chimney"></i>
                 <span>voltar para o início</span>
             </a>
-            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 5px 0;">
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(0,0,0,0.08); margin: 5px 0;">
 
             <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
-            <a href="nanda.html" class="sidebar-link active-artist"><i class="fa-solid fa-ranking-star"></i>
-                NandaTsunami</a>
+            <a href="nanda.html" class="sidebar-link"><i class="fa-solid fa-ranking-star"></i> NandaTsunami</a>
             <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
             <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
             <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
             <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
             <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
-            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
+            <a href="harry.html" class="sidebar-link active-artist"><i class="fa-solid fa-guitar"></i> Harry Style</a>
             <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
-            <a href="john.html" class="sidebar-link active-artist"><i class="fa-solid fa-crosshairs"></i> John</a>
+            <a href="john.html" class="sidebar-link"><i class="fa-solid fa-crosshairs"></i> John</a>
         </nav>
     </aside>
 
@@ -76,11 +72,18 @@
             </button>
         </nav>
 
+        <div id="mobile_menu" role="menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">álbum</a></li>
+                <li class="nav-item"><a href="#menu">conceito</a></li>
+                <li class="nav-item"><a href="#menu2">crítica</a></li>
+            </ul>
+        </div>
     </header>
 
     <main id="content">
         <section id="home">
-            <div id="cta">
+            <div id="cta" class="scroll-animate from-left">
                 <h1 class="title">Harry Styles</h1>
                 <p class="description">
                     O álbum homônimo de estreia de Harry Styles marca sua transição artística para um som profundamente
@@ -93,7 +96,7 @@
                 </div>
             </div>
 
-            <div id="banner">
+            <div id="banner" class="scroll-animate from-right">
                 <div class="album-wrapper floating-art">
                     <a href="https://open.spotify.com/intl-pt/album/1FZKIm3JVDCxTchXDo5jOV" target="_blank"
                         rel="noopener" title="Ouvir no Spotify">
@@ -107,11 +110,12 @@
         </section>
 
         <section id="menu">
-            <h2 class="section-title">A Estética Intimista</h2>
-            <h3 class="section-subtitle">Vulnerabilidade envolta em rock clássico e melancolia.</h3>
+            <h2 class="section-title scroll-animate from-bottom">A Estética Intimista</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">Vulnerabilidade envolta em rock clássico e
+                melancolia.</h3>
 
             <div class="menu-container">
-                <div class="menu-item harry-card">
+                <div class="menu-item harry-card scroll-animate from-bottom delay-1">
                     <img src="src/images/reto.jpg" alt="Water Aesthetics" class="menu-img">
                     <div class="menu-details">
                         <h4 class="card-item-title">A Água e o Rosa Pastel</h4>
@@ -121,7 +125,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="menu-item harry-card">
+                <div class="menu-item harry-card scroll-animate from-bottom delay-2">
                     <img src="src/images/disco.jpg" alt="Vintage Influence" class="menu-img">
                     <div class="menu-details">
                         <h4 class="card-item-title">Processo de Criação</h4>
@@ -131,7 +135,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="menu-item harry-card">
+                <div class="menu-item harry-card scroll-animate from-bottom delay-3">
                     <img src="src/images/vermei.jfif" alt="Sign of the Times" class="menu-img">
                     <div class="menu-details">
                         <h4 class="card-item-title">Sign of the Times</h4>
@@ -146,11 +150,12 @@
         </section>
 
         <section id="menu2">
-            <h2 class="section-title">Recepção Crítica</h2>
-            <h3 class="section-subtitle">Como os principais veículos receberam o primeiro passo solo de Harry.</h3>
+            <h2 class="section-title scroll-animate from-bottom">Recepção Crítica</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">Como os principais veículos receberam o primeiro
+                passo solo de Harry.</h3>
 
             <div class="critica-grid">
-                <div class="critica-card harry-card">
+                <div class="critica-card harry-card scroll-animate from-bottom delay-1">
                     <div class="critica-header">
                         <img src="src/images/rolling-stone-logo.png" alt="Rolling Stone" class="critica-logo">
                         <span class="nota">★★★★☆</span>
@@ -163,7 +168,7 @@
                     <span class="critico-nome">Rolling Stone</span>
                 </div>
 
-                <div class="critica-card harry-card">
+                <div class="critica-card harry-card scroll-animate from-bottom delay-2">
                     <div class="critica-header">
                         <img src="src/images/pitchfork-wordmark-new.png" alt="NME" class="critica-logo">
                         <span class="nota">★★★★☆</span>
@@ -175,7 +180,7 @@
                     <span class="critico-nome">NME Magazine</span>
                 </div>
 
-                <div class="critica-card harry-card">
+                <div class="critica-card harry-card scroll-animate from-bottom delay-3">
                     <div class="critica-header">
                         <img src="src/images/usa.png" alt="Consequence of Sound" class="critica-logo">
                         <span class="nota">★★★★☆</span>
@@ -215,7 +220,6 @@
     </footer>
 
     <script src="src/javascript/harry.js"></script>
-    <script src="src/javascript/capa.js"></script>
 </body>
 
 </html>

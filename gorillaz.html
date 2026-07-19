@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="src/style/gorillazheader.css">
     <link rel="stylesheet" href="src/style/gorillazhome.css">
 
-    <link rel="stylesheet" href="src/style/capastyle.css">
-    <link rel="stylesheet" href="src/style/capaheader.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
@@ -35,16 +32,15 @@
             <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 5px 0;">
 
             <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
-            <a href="nanda.html" class="sidebar-link active-artist"><i class="fa-solid fa-ranking-star"></i>
-                NandaTsunami</a>
+            <a href="nanda.html" class="sidebar-link"><i class="fa-solid fa-ranking-star"></i> NandaTsunami</a>
             <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
             <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
             <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
             <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
             <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
             <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-guitar"></i> Harry Style</a>
-            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
-            <a href="john.html" class="sidebar-link active-artist"><i class="fa-solid fa-crosshairs"></i> John</a>
+            <a href="gorillaz.html" class="sidebar-link active-artist"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link"><i class="fa-solid fa-crosshairs"></i> John</a>
         </nav>
     </aside>
     <header>
@@ -86,7 +82,7 @@
 
     <main id="content">
         <section id="home">
-            <div id="cta">
+            <div id="cta" class="scroll-animate from-left">
                 <h1 class="title">Plastic Beach</h1>
                 <p class="description">
                     Plastic Beach é o aclamado terceiro álbum de estúdio da banda virtual britânica Gorillaz, lançado
@@ -99,7 +95,7 @@
                 </div>
             </div>
 
-            <div id="banner">
+            <div id="banner" class="scroll-animate from-right">
                 <div class="album-wrapper ocean-sway">
                     <a href="https://open.spotify.com/intl-pt/album/2dIGnmEIy1WZIcZCFSj6i8" target="_blank"
                         rel="noopener" title="Ouvir no Spotify">
@@ -113,11 +109,12 @@
         </section>
 
         <section id="menu">
-            <h2 class="section-title">O Conceito da Ilha</h2>
-            <h3 class="section-subtitle">Deixando o mundo real para trás e conhecendo o quartel-general da banda</h3>
+            <h2 class="section-title scroll-animate from-bottom">O Conceito da Ilha</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">Deixando o mundo real para trás e conhecendo o
+                quartel-general da banda</h3>
 
             <div class="menu-container">
-                <div class="menu-item gorillaz-card">
+                <div class="menu-item gorillaz-card scroll-animate from-bottom delay-1">
                     <img src="src/images/fri.avif" alt="Eco-Distopia" class="menu-img">
                     <div class="menu-details">
                         <h4 class="card-item-title">Poluição e Crítica</h4>
@@ -127,7 +124,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="menu-item gorillaz-card">
+                <div class="menu-item gorillaz-card scroll-animate from-bottom delay-2">
                     <img src="src/images/surf.jpg" alt="Colaborações" class="menu-img">
                     <div class="menu-details">
                         <h4 class="card-item-title">Quase falência</h4>
@@ -137,7 +134,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="menu-item gorillaz-card">
+                <div class="menu-item gorillaz-card scroll-animate from-bottom delay-3">
                     <img src="src/images/projeto.jpg" alt="Fase 3" class="menu-img">
                     <div class="menu-details">
                         <h4 class="card-item-title">Visual 3D & Animação</h4>
@@ -156,7 +153,7 @@
                 Albarn.</h3>
 
             <div class="critica-grid">
-                <div class="critica-card gorillaz-card">
+                <div class="critica-card gorillaz-card scroll-animate from-bottom delay-1">
                     <div class="critica-header">
                         <img src="src/images/pitchfork-wordmark-new.png" alt="Pitchfork" class="critica-logo">
                         <span class="nota">8.5/10</span>
@@ -169,7 +166,7 @@
                     <span class="critico-nome">Pitchfork</span>
                 </div>
 
-                <div class="critica-card gorillaz-card">
+                <div class="critica-card gorillaz-card scroll-animate from-bottom delay-2">
                     <div class="critica-header">
                         <img src="src/images/entre.png" alt="The Guardian" class="critica-logo">
                         <span class="nota">★★★★★</span>
@@ -181,7 +178,7 @@
                     <span class="critico-nome">Entertainment Weekly</span>
                 </div>
 
-                <div class="critica-card gorillaz-card">
+                <div class="critica-card gorillaz-card scroll-animate from-bottom delay-3">
                     <div class="critica-header">
                         <img src="src/images/exi.jfif" alt="NME" class="critica-logo">
                         <span class="nota">★★★★☆</span>
@@ -221,7 +218,6 @@
     </footer>
 
     <script src="src/javascript/gorillaz.js"></script>
-    <script src="src/javascript/capa.js"></script>
 </body>
 
 </html>
