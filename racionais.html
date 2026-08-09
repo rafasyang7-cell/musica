@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racionais MC's | Sobrevivendo no Inferno</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="src/style/racionaisstyle.css">
+    <link rel="stylesheet" href="src/style/racionaisheader.css">
+    <link rel="stylesheet" href="src/style/racionaishome.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="racionais-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 5px 0;">
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link"><i class="fa-solid fa-ranking-star"></i>
+                NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-moon"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-water"></i> Harry Styles</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link"><i class="fa-solid fa-crosshairs"></i> John</a>
+            <a href="sza.html" class="sidebar-link"><i class="fa-solid fa-seedling"></i> SZA</a>
+            <a href="lana.html" class="sidebar-link"><i class="fa-solid fa-sailboat"></i> Lana Del Rey</a>
+            <a href="luanna.html" class="sidebar-link"><i class="fa-solid fa-eye"></i> MC Luanna</a>
+            <a href="racionai.html" class="sidebar-link active-artist"><i class="fa-solid fa-cross"></i> Racionais
+                MC's</a>
+        </nav>
+    </aside>
+
+    <header>
+        <nav id="navbar">
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-cross animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="#home">o álbum</a></li>
+                    <li class="nav-item"><a href="#menu">o clássico</a></li>
+                    <li class="nav-item"><a href="#menu2">o veredito</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir seções" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu" role="menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">o álbum</a></li>
+                <li class="nav-item"><a href="#menu">o clássico</a></li>
+                <li class="nav-item"><a href="#menu2">o veredito</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div id="cta" class="scroll-animate from-left">
+                <h1 class="title">Sobrevivendo no Inferno</h1>
+                <p class="description">
+                    Sobrevivendo no Inferno é o quarto álbum de estúdio dos Racionais MC's, lançado em 1997, e
+                    consolidado como a obra-prima mais importante do rap nacional e um marco da cultura brasileira.Ele
+                    transformou o rap em um poderoso instrumento de denúncia política, social e racial. Tamanha é sua
+                    relevância estética e literária que as letras foram publicadas em formato de livro pela Companhia
+                    das Letras e tornaram-se leitura obrigatória no vestibular da Unicamp.
+                </p>
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-more">Ler o Testamento</a>
+                </div>
+            </div>
+
+            <div id="banner" class="scroll-animate from-right">
+                <div class="album-wrapper cross-shimmer">
+                    <a href="https://open.spotify.com/album/4vS7DbaZbeZzH4I40V786H" target="_blank" rel="noopener"
+                        title="Ouvir no Spotify">
+                        <img src="src/images/cruz.jpg" alt="Capa Sobrevivendo no Inferno">
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="scroll-animate from-bottom">
+                <h2 class="section-title">Evangelho do Gueto</h2>
+                <h3 class="section-subtitle">A crônica de uma era e a resistência através da palavra.</h3>
+            </div>
+
+            <div class="menu-container">
+                <div class="menu-item racionais-card scroll-animate from-bottom">
+                    <img src="src/images/igreja.jfif" alt="História" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Capítulo 4, Versículo 3</h4>
+                        <p class="card-item-description">Uma das faixas mais emblemáticas da música brasileira. Inicia
+                            com estatísticas brutais sobre o genocídio da juventude negra e apresenta o eu lírico pronto
+                            para o combate contra a discriminação.</p>
+                    </div>
+                </div>
+                <div class="menu-item racionais-card scroll-animate from-bottom">
+                    <img src="src/images/cinza.jpg" alt="Impacto" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">O estouro nos camelôs</h4>
+                        <p class="card-item-description">Oficialmente, o disco vendeu cerca de 1,5 milhão de cópias.
+                            No entanto, por ter estourado no mercado alternativo e na pirataria das bancas de camelô,
+                            estima-se que o álbum tenha ultrapassado 4 milhões de cópias distribuídas pelo Brasil..</p>
+                    </div>
+                </div>
+                <div class="menu-item racionais-card scroll-animate from-bottom">
+                    <img src="src/images/tras.jpg" alt="Estúdio" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">A polêmica no VMB 1998</h4>
+                        <p class="card-item-description">No auge do sucesso, os Racionais ganharam o prêmio de Escolha
+                            da Audiência na MTV Brasil pelo clipe de "Diário de um Detento". Ao subir ao palco, o grupo
+                            não fez um discurso de agradecimento festivo. Mano Brown pegou o microfone e mandou um
+                            recado direto contra o sistema prisional e a violência do Estado, deixando a diretoria da
+                            emissora em pânico ao vivo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu2">
+            <div class="scroll-animate from-bottom">
+                <h2 class="section-title">O Veredito</h2>
+                <h3 class="section-subtitle">O reconhecimento unânime da maior obra do Rap Brasileiro.</h3>
+            </div>
+
+            <div class="critica-grid">
+                <div class="critica-card racionais-card scroll-animate from-left">
+                    <div class="critica-header">
+                        <img src="src/images/rolling-stone-logo.png" alt="Rolling Stone Brasil" class="critica-logo">
+                        <span class="nota">10/10</span>
+                    </div>
+                    <p class="critica-texto">"Sobrevivendo no Inferno é a obra-prima definitiva. Um documento histórico
+                        que transcende a música e se torna um guia de sobrevivência, colocou o rap no topo das
+                        paradas... A música, com sua bateria básica, alguma melodia nos teclados, e arranjos simples,
+                        vira adereço em relação ao impacto das letras."</p>
+                    <span class="critico-nome">Rolling Stone Brasil</span>
+                </div>
+
+                <div class="critica-card racionais-card scroll-animate from-bottom">
+                    <div class="critica-header">
+                        <img src="src/images/bike.png" alt="Companhia das Letras" class="critica-logo">
+                        <span class="nota">★★★★★</span>
+                    </div>
+                    <p class="critica-texto">"O grupo ajudou desenvolver um espaço discursivo em que os cidadãos
+                        periféricos puderam se apropriar de sua própria imagem, construindo para si uma voz que, no
+                        limite, mudaria a forma de enxergar e vivenciar a pobreza no Brasil."</p>
+                    <span class="critico-nome">Companhia das Letras</span>
+                </div>
+
+                <div class="critica-card racionais-card scroll-animate from-right">
+                    <div class="critica-header">
+                        <img src="src/images/folha.png" alt="Folha de São Paulo" class="critica-logo">
+                        <span class="nota">9.8</span>
+                    </div>
+                    <p class="critica-texto">"Racionais faz, sobretudo, arte. De quanto em quanto tempo ouve-se um disco
+                        que envolve, perturba e incita à revisão de posturas? Um disco que se oferece para o abate de
+                        certezas com tanta fúria e dignidade?"</p>
+                    <span class="critico-nome">Folha de São Paulo</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fa-solid fa-cross"></i>
+                <span>Discografias</span>
+            </div>
+            <p class="footer-text">
+                ""12 de outubro, uma data comum pra você, pra mim é o aniversário do inferno."
+                <br>
+                Portfólio musical desenvolvido com foco na história do Rap Nacional.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:rafasyang7@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/racionaisscript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+/* ==========================================================================
+   LUANNASTYLE.CSS - PALETA SEXTO SENTIDO (PRETO, BRANCO E CINZA)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+    --font-titles: "Syne", sans-serif;
+    --font-text: "Plus Jakarta Sans", sans-serif;
+
+    /* PALETA MONOCROMÁTICA URBANA */
+    --bg-black: #080808;
+    /* Preto Puro de Fundo */
+    --bg-cards: #121212;
+    /* Cinza Escuro de Cards */
+
+    --accent-white: #ffffff;
+    /* Branco Brilhante */
+    --accent-gray-light: #d1d1d1;
+    /* Cinza Claro */
+    --accent-gray-mid: #333333;
+    /* Cinza Médio */
+    --accent-gray-dark: #1a1a1a;
+    /* Cinza Profundo */
+
+    --white-glow: rgba(255, 255, 255, 0.15);
+    --border-gray: rgba(255, 255, 255, 0.1);
+
+    --text-light: #ffffff;
+    --text-muted: #a0a0a0;
+
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* RESET E CORREÇÃO CRÍTICA CONTRA FAIXAS BRANCAS NO TOPO */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: var(--bg-black) !important;
+    color: var(--text-light);
+    font-family: var(--font-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+/* Scrollbar Monocromática */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-gray-mid);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-white);
+}
+
+/* Tipografia */
+h1,
+h2,
+h3,
+.section-title,
+.nota {
+    font-family: var(--font-titles);
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+section {
+    width: 100%;
+    padding: 120px 10% 80px 10%;
+    position: relative;
+    background-color: var(--bg-black);
+}
+
+.section-title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    text-align: center;
+    color: var(--text-muted);
+    margin: 0 auto 70px auto;
+    max-width: 600px;
+    text-transform: none;
+    font-weight: 400;
+}
+
+/* CARDS SEXTO SENTIDO - ESTILO MONOCROMÁTICO */
+.luanna-card {
+    background: var(--bg-cards);
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    transition: var(--transition-smooth);
+}
+
+.luanna-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-white);
+    box-shadow: 0 15px 35px var(--white-glow);
+}
+
+/* FOOTER */
+#footer {
+    background-color: #040404;
+    padding: 80px 10% 40px;
+    border-top: 1px solid var(--accent-gray-dark);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-brand {
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand i {
+    color: var(--accent-white);
+}
+
+.footer-text {
+    max-width: 550px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-cards);
+    color: var(--text-light);
+    border: 1px solid var(--border-gray);
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    background: var(--accent-white);
+    color: var(--bg-black);
+    border-color: var(--accent-white);
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* ================= ANIMAÇÕES POR SCROLL ================= */
+.scroll-animate {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.from-bottom {
+    transform: translateY(50px);
+}
+
+.from-left {
+    transform: translateX(-60px);
+}
+
+.from-right {
+    transform: translateX(60px);
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* ================= GRID CRÍTICAS ================= */
+.critica-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* ================= CARD CRÍTICA ================= */
+.critica-card {
+    background: var(--bg-cards);
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.critica-card:hover {
+    border-color: var(--accent-white);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px var(--white-glow);
+}
+
+/* ================= HEADER DO CARD ================= */
+.critica-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px 16px;
+    margin-bottom: 25px;
+}
+
+.critica-logo {
+    max-height: 35px;
+    max-width: 120px;
+    object-fit: contain;
+    opacity: 0.9;
+}

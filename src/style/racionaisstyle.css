@@ -1,0 +1,168 @@
+/* ================= RACIONAISSTYLE.CSS - ESTÉTICA GÓTICA E URBANA ================= */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+:root {
+    --font-gothic: "UnifrakturMaguntia", cursive;
+    /* Para o estilo da capa */
+    --font-text: "Plus Jakarta Sans", sans-serif;
+
+    /* Cores Sobrevivendo no Inferno */
+    --bg-racionais: #000000;
+    --bg-cards: #0a0a0a;
+    --accent-red: #8B0000;
+    /* Vermelho Sangue Escuro */
+    --accent-gold: #D4AF37;
+    /* Ouro Envelhecido */
+    --text-light: #f5f5f5;
+    --text-muted: #707070;
+
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* RESET E ELIMINAÇÃO DE FAIXA BRANCA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: var(--bg-racionais);
+    color: var(--text-light);
+    font-family: var(--font-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-racionais);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-red);
+}
+
+h1,
+.section-title {
+    font-family: var(--font-gothic);
+}
+
+section {
+    width: 100%;
+    padding: 120px 10% 80px 10%;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    text-align: center;
+    color: var(--accent-red);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-muted);
+    margin: 0 auto 70px auto;
+    max-width: 600px;
+    text-transform: uppercase;
+}
+
+/* CARDS RACIONAIS */
+.racionais-card {
+    background: var(--bg-cards);
+    border: 1px solid rgba(139, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 1);
+    transition: var(--transition-smooth);
+}
+
+.racionais-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-gold);
+}
+
+/* FOOTER */
+#footer {
+    background-color: #050505;
+    padding: 80px 10% 40px;
+    border-top: 2px solid var(--accent-red);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-brand {
+    font-family: var(--font-gothic);
+    font-size: 2rem;
+    color: var(--accent-red);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-text {
+    color: var(--text-muted);
+    max-width: 550px;
+    font-style: italic;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-socials a {
+    color: var(--text-light);
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    color: var(--accent-gold);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* ================= ANIMAÇÃO DE SURGIMENTO POR SCROLL ================= */
+.scroll-animate {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.from-bottom {
+    transform: translateY(50px);
+}
+
+.from-left {
+    transform: translateX(-60px);
+}
+
+.from-right {
+    transform: translateX(60px);
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translate(0);
+}
