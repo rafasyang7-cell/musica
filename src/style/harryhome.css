@@ -83,6 +83,41 @@
     }
 }
 
+/* Ondulações de água deslizando sobre a capa — remetendo diretamente
+   à sessão de fotos na banheira que é a estética central do álbum. */
+.album-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background:
+        repeating-linear-gradient(115deg,
+            rgba(255, 255, 255, 0.12) 0px,
+            rgba(255, 255, 255, 0.12) 2px,
+            transparent 2px,
+            transparent 26px);
+    background-size: 200% 200%;
+    mix-blend-mode: overlay;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 2;
+    animation: waterRipple 6s ease-in-out infinite;
+}
+
+@keyframes waterRipple {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 30%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
 .album-wrapper img {
     width: 100%;
     height: auto;
@@ -90,6 +125,8 @@
     border-radius: 12px;
     box-shadow: 0 30px 60px rgba(44, 37, 37, 0.15);
     transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    z-index: 1;
 }
 
 /* Efeito Flutuar Suave Contínuo */
@@ -121,6 +158,7 @@
     justify-content: center;
     opacity: 0;
     transition: var(--transition-smooth);
+    z-index: 3;
 }
 
 .spotify-overlay i {

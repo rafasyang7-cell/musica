@@ -8,12 +8,14 @@ $(document).ready(function () {
         var textElement = $('.brand-text');
 
         if (scrollDistance > 50) {
+            $('header').addClass('scrolled');
             textElement.css({
                 'opacity': '0',
                 'visibility': 'hidden',
                 'transition': 'opacity 0.3s ease, visibility 0.3s ease'
             });
         } else {
+            $('header').removeClass('scrolled');
             textElement.css({
                 'opacity': '1',
                 'visibility': 'visible'
@@ -75,7 +77,51 @@ $(document).ready(function () {
     });
 
     /* ==========================================================================
-       5. EFEITO INTERATIVO DE DESLOCAMENTO DINÂMICO (PARALAXE) COM O MOUSE
+       5. SCROLLSPY — ÁLBUM / CONCEITO / CRÍTICA (era o que faltava)
+       ========================================================================== */
+    const header = $('header');
+    const navItems = $('#nav_list li, #mobile_nav_list li');
+
+    function updateActiveMenu() {
+        const spyOffset = header.outerHeight() + 40;
+        let currentSection = '';
+
+        $('main section[id]').each(function () {
+            const sectionTop = $(this).offset().top - spyOffset;
+            const sectionHeight = $(this).outerHeight();
+            if ($(window).scrollTop() >= sectionTop && $(window).scrollTop() < sectionTop + sectionHeight) {
+                currentSection = $(this).attr('id');
+            }
+        });
+
+        navItems.removeClass('active');
+        $(`#nav_list a[href="#${currentSection}"], #mobile_nav_list a[href="#${currentSection}"]`)
+            .parent()
+            .addClass('active');
+    }
+
+    updateActiveMenu();
+    $(window).on('scroll', updateActiveMenu);
+
+    /* ==========================================================================
+       6. SCROLL SUAVE NOS LINKS INTERNOS
+       ========================================================================== */
+    $('a[href^="#"]').on('click', function (e) {
+        const target = $($(this).attr('href'));
+        if (target.length) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top - (header.outerHeight() - 10)
+            }, 700);
+
+            if ($('#mobile_menu').hasClass('active')) {
+                $('#mobile_menu').removeClass('active');
+            }
+        }
+    });
+
+    /* ==========================================================================
+       7. EFEITO INTERATIVO DE DESLOCAMENTO DINÂMICO (PARALAXE) COM O MOUSE
        ========================================================================== */
     const artContainer = $('.album-wrapper');
     const targetImg = artContainer.find('img');

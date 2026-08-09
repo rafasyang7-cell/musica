@@ -8,12 +8,14 @@ $(document).ready(function () {
         var textElement = $('.brand-text');
 
         if (scrollDistance > 50) {
+            $('header').addClass('scrolled');
             textElement.css({
                 'opacity': '0',
                 'visibility': 'hidden',
                 'transition': 'opacity 0.3s ease, visibility 0.3s ease'
             });
         } else {
+            $('header').removeClass('scrolled');
             textElement.css({
                 'opacity': '1',
                 'visibility': 'visible'
@@ -75,39 +77,79 @@ $(document).ready(function () {
     });
 
     /* ==========================================================================
-       5. EFEITO INTERATIVO MOUSE-MOVE SIMULANDO ONDULAÇÃO NO MAR
+       5. SCROLLSPY — ÁLBUM / CONCEITO / CRÍTICA (era o que faltava)
        ========================================================================== */
-    const container = $('.album-wrapper');
-    const image = container.find('img');
+    const header = $('header');
+    const navItems = $('#nav_list li, #mobile_nav_list li');
 
-    container.on('mousemove', function (e) {
-        const cWidth = container.outerWidth();
-        const cHeight = container.outerHeight();
+    function updateActiveMenu() {
+        const spyOffset = header.outerHeight() + 40;
+        let currentSection = '';
 
-        // Posição cartesiana do ponteiro do mouse a partir do ponto central
-        const coordX = e.pageX - container.offset().left - cWidth / 2;
-        const coordY = e.pageY - container.offset().top - cHeight / 2;
+        $('main section[id]').each(function () {
+            const sectionTop = $(this).offset().top - spyOffset;
+            const sectionHeight = $(this).outerHeight();
+            if ($(window).scrollTop() >= sectionTop && $(window).scrollTop() < sectionTop + sectionHeight) {
+                currentSection = $(this).attr('id');
+            }
+        });
 
-        // Transforma o movimento em inclinação líquida (Tilt de até 12 graus)
-        const tiltX = (-coordY / (cHeight / 2)) * 12;
-        const tiltY = (coordX / (cWidth / 2)) * 12;
+        navItems.removeClass('active');
+        $(`#nav_list a[href="#${currentSection}"], #mobile_nav_list a[href="#${currentSection}"]`)
+            .parent()
+            .addClass('active');
+    }
 
-        // Pausa o balanço passivo das ondas para priorizar o mouse
-        container.css('animation-play-state', 'paused');
+    updateActiveMenu();
+    $(window).on('scroll', updateActiveMenu);
 
-        image.css({
-            'transform': `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.03)`,
-            'box-shadow': '0 30px 65px rgba(0, 180, 216, 0.25)'
+    /* ==========================================================================
+       6. SCROLL SUAVE NOS LINKS INTERNOS
+       ========================================================================== */
+    $('a[href^="#"]').on('click', function (e) {
+        const target = $($(this).attr('href'));
+        if (target.length) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top - (header.outerHeight() - 10)
+            }, 700);
+
+            if ($('#mobile_menu').hasClass('active')) {
+                $('#mobile_menu').removeClass('active');
+            }
+        }
+    });
+
+    /* ==========================================================================
+       7. EFEITO INTERATIVO DE DESLOCAMENTO DINÂMICO (PARALAXE) COM O MOUSE
+       ========================================================================== */
+    const artContainer = $('.album-wrapper');
+    const targetImg = artContainer.find('img');
+
+    artContainer.on('mousemove', function (event) {
+        const containerWidth = artContainer.outerWidth();
+        const containerHeight = artContainer.outerHeight();
+
+        const mouseX = event.pageX - artContainer.offset().left - containerWidth / 2;
+        const mouseY = event.pageY - artContainer.offset().top - containerHeight / 2;
+
+        const moveX = (mouseX / (containerWidth / 2)) * 10;
+        const moveY = (mouseY / (containerHeight / 2)) * 10;
+
+        artContainer.css('animation-play-state', 'paused');
+
+        targetImg.css({
+            'transform': `translate(${moveX}px, ${moveY}px) scale(1.02)`,
+            'box-shadow': '0 35px 70px rgba(44, 37, 37, 0.25)'
         });
     });
 
-    // Libera a imagem para voltar a flutuar na maré do CSS quando o mouse sai
-    container.on('mouseleave', function () {
-        container.css('animation-play-state', 'running');
+    artContainer.on('mouseleave', function () {
+        artContainer.css('animation-play-state', 'running');
 
-        image.css({
-            'transform': 'rotateX(0deg) rotateY(0deg) scale(1)',
-            'box-shadow': '0 25px 55px rgba(0,0,0,0.5)'
+        targetImg.css({
+            'transform': 'translate(0px, 0px) scale(1)',
+            'box-shadow': '0 30px 60px rgba(44, 37, 37, 0.15)'
         });
     });
 });
