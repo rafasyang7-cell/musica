@@ -184,20 +184,21 @@ section {
     padding: 30px;
     border-radius: 25px;
     transition: var(--transition-smooth);
-    border: 1px solid rgba(188, 138, 95, 0.1);
+    border: 1px solid rgba(143, 168, 139, 0.1);
 }
 
 .critica-card:hover {
     transform: translateY(-6px);
-    border-color: var(--accent-emicida);
-    box-shadow: 0 15px 40px rgba(188, 138, 95, 0.08);
-    /* Brilho sutil no card de crítica */
+    border-color: var(--accent-sage);
+    box-shadow: 0 15px 40px var(--accent-sage-glow);
 }
 
 .critica-header {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 8px 16px;
     margin-bottom: 20px;
 }
 
@@ -209,13 +210,13 @@ section {
 
 .nota {
     font-weight: bold;
-    color: var(--accent-emicida);
+    color: var(--accent-sage);
     font-size: 0.9rem;
 }
 
 .critica-texto {
     font-size: 0.95rem;
-    color: var(--color-gray);
+    color: var(--text-muted);
     margin-bottom: 20px;
 }
 
@@ -227,13 +228,10 @@ section {
 
 /* Destacar o artista selecionado na barra lateral */
 .sidebar-link.active-artist {
-    color: #8fa88b !important;
-    /* Cor tom pastel/Sweetener da Ariana */
-    background-color: rgba(201, 127, 160, 0.1);
-    /* Fundo sutil de destaque */
+    color: var(--accent-sage) !important;
+    background-color: var(--accent-sage-glow);
     font-weight: 700;
-    border-left: 3px solid #1a221c;
-    /* Barrinha lateral indicativa */
+    border-left: 3px solid var(--bg-cards);
     padding-left: 17px;
     /* Ajuste sutil por conta da borda */
 }

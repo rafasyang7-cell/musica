@@ -189,6 +189,43 @@
     line-height: 1.6;
 }
 
+/* ================= ANIMAÇÃO DE SURGIMENTO AO ROLAR ================= */
+.scroll-animate {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.from-bottom {
+    transform: translateY(40px);
+}
+
+.from-left {
+    transform: translateX(-50px);
+}
+
+.from-right {
+    transform: translateX(50px);
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
 /* RESPONSIVO */
 @media screen and (max-width: 868px) {
     #home {
