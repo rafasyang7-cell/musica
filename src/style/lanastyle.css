@@ -1,0 +1,217 @@
+/* ==========================================================================
+   LANASTYLE.CSS - ESTÉTICA FIEL A NORMAN FUCKING ROCKWELL! (NFR!)
+   Cores: Verde Menta Vintage, Azul Marítimo Deep, Amarelo Náutico Pop
+   e Dourado Pôr-do-Sol (tom já usado nos brilhos do card, agora oficial)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+    /* Tipografia */
+    --font-titles: "Playfair Display", serif;
+    --font-text: "Plus Jakarta Sans", sans-serif;
+
+    /* PALETA NFR! OFICIAL */
+    --bg-lana: #0f232a;
+    /* Azul Marítimo Escuro (Fundo principal) */
+    --bg-cards: #152f38;
+    /* Azul Marinho Médio (Fundo dos cards) */
+
+    --accent-yellow: #d1ec3e;
+    /* Amarelo Náutico Neon (Título oficial do NFR!) */
+    --accent-yellow-glow: rgba(209, 236, 62, 0.25);
+
+    --accent-gold: #e5a963;
+    /* Dourado pôr-do-sol — combina com o brilho já usado atrás da capa */
+    --accent-gold-glow: rgba(229, 169, 99, 0.35);
+
+    --accent-mint: #6b8e85;
+    /* Verde Menta / Sage Vintage (Céu/Capa) */
+    --accent-ocean-blue: #2c5866;
+    /* Azul Oceano */
+    --accent-ocean: var(--accent-ocean-blue);
+    --border-vintage: rgba(107, 142, 133, 0.25);
+
+    --text-light: #eef5f3;
+    /* Branco Areia / Marfim */
+    --text-muted: #a3c4bd;
+    /* Menta Claro Desbotado */
+
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-lana);
+    color: var(--text-light);
+    font-family: var(--font-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Scrollbar personalizada com o dourado NFR! */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-lana);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-gold);
+    border-radius: 4px;
+}
+
+/* Tipografia */
+h1,
+h2,
+h3,
+.section-title,
+.nota {
+    font-family: var(--font-titles);
+    letter-spacing: -0.5px;
+}
+
+section {
+    width: 100%;
+    padding: 120px 10% 80px 10%;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    text-align: center;
+    color: var(--text-muted);
+    margin: 0 auto 70px auto;
+    max-width: 600px;
+    font-style: italic;
+}
+
+/* CARDS NFR! - ESTILO VINTAGE ELEGANTE */
+.lana-card {
+    background: var(--bg-cards);
+    border: 1px solid var(--border-vintage);
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    transition: var(--transition-smooth);
+}
+
+.lana-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 16px 40px var(--accent-gold-glow), 0 0 20px rgba(107, 142, 133, 0.2);
+}
+
+/* FOOTER */
+#footer {
+    background-color: #081419;
+    padding: 80px 10% 40px;
+    border-top: 1px solid rgba(107, 142, 133, 0.15);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-brand {
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand i {
+    color: var(--accent-gold);
+}
+
+.footer-text {
+    max-width: 550px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-cards);
+    color: var(--text-light);
+    border: 1px solid var(--border-vintage);
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    background: var(--accent-gold);
+    color: var(--bg-lana);
+    border-color: var(--accent-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px var(--accent-gold-glow);
+}
+
+.footer-copyright {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   ANIMAÇÃO DE SURGIMENTO POR SCROLL (SCROLL REVEAL)
+   ========================================================================== */
+.scroll-animate {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.from-bottom {
+    transform: translateY(50px);
+}
+
+.from-left {
+    transform: translateX(-60px);
+}
+
+.from-right {
+    transform: translateX(60px);
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translate(0);
+}
