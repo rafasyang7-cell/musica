@@ -300,3 +300,80 @@ header.scrolled .album-switch .btn-default {
         font-size: 1.2rem;
     }
 }
+
+#toggle_container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#sidebar_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-light);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-family: var(--font-titles);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#sidebar_btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 24px var(--accent-glow);
+}
+
+.arrow-indicator {
+    color: var(--color-gray);
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+/* ================= NAV LIST (álbum / conceito / crítica) ================= */
+#nav_list_container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#nav_list {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    align-items: center;
+    padding-left: 18px;
+    border-left: 1px solid rgba(255, 51, 102, 0.25);
+}
+
+#nav_list li a {
+    display: flex;
+    align-items: center;
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-family: var(--font-text);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#nav_list li a:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+}
+
+#nav_list li.active a {
+    background: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 8px 18px var(--accent-glow);
+}

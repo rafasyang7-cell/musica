@@ -1,0 +1,159 @@
+/* ================= SZAHEADER.CSS (ABSOLUTAMENTE SEM BORDAS OU FAIXAS BRANCAS) ================= */
+
+header {
+    width: 100%;
+    padding: 25px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(17, 22, 18, 0.85);
+    /* Totalmente mesclado com o fundo do app */
+    border: none;
+    /* Faixa branca completamente removida */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#toggle_container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+#sidebar_btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-family: var(--font-text);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#sidebar_btn:hover i {
+    color: var(--accent-sage);
+}
+
+.arrow-indicator {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    animation: sagePulse 1.8s infinite;
+}
+
+.logo-center {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-titles);
+    font-size: 1.1rem;
+    font-style: italic;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo-center i {
+    color: var(--accent-sage);
+}
+
+#nav_list_container {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+#nav_list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-item a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: var(--transition-smooth);
+}
+
+.nav-item a:hover,
+.nav-item.active a {
+    color: var(--accent-sage);
+}
+
+#mobile_btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+@keyframes sagePulse {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translateX(-4px);
+        opacity: 0.8;
+        color: var(--accent-sage);
+    }
+}
+
+@media screen and (max-width: 912px) {
+    #nav_list_container {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+    }
+
+    #mobile_menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-cards);
+        padding: 20px;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    #mobile_menu.open {
+        display: block;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        list-style: none;
+        text-align: center;
+    }
+}

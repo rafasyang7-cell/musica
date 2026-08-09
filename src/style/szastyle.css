@@ -1,23 +1,23 @@
-/* ================= JOHNSTYLE.CSS - ESTÉTICA PRETO E VERMELHO FOSCO ================= */
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;900&family=Syncopate:wght@700&display=swap');
+/* ================= SZASTYLE.CSS - ESTÉTICA VERDE NATUREZA / ANALÓGICA ================= */
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
 
 :root {
-    --font-titles: "Syncopate", sans-serif;
-    /* Industrial, larga, moderna e agressiva */
+    --font-titles: "Playfair Display", serif;
+    /* Orgânico, literário e elegante */
     --font-text: "Albert Sans", sans-serif;
 
-    /* Cores Fosco Matte / Underground */
-    --bg-john: #0b0b0c;
-    /* Preto profundo carvão */
-    --bg-cards: #131315;
-    /* Grafite fosco industrial */
-    --accent-red: #c1272d;
-    /* Vermelho fosco envelhecido / Vermelho sangue */
-    --accent-red-glow: rgba(193, 39, 45, 0.2);
-    --text-light: #f1f1f2;
-    --text-muted: #71717a;
+    /* Cores SZA - Ctrl (Verdes e Terrosos) */
+    --bg-sza: #111612;
+    /* Verde musgo escuro profundo */
+    --bg-cards: #1a221c;
+    /* Verde sálvia oliva escuro */
+    --accent-sage: #8fa88b;
+    /* Verde sálvia suave */
+    --accent-sage-glow: rgba(143, 168, 139, 0.15);
+    --text-light: #f3f4f3;
+    --text-muted: #839085;
 
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -32,25 +32,24 @@ html {
 }
 
 body {
-    background-color: var(--bg-john);
+    background-color: var(--bg-sza);
     color: var(--text-light);
     font-family: var(--font-text);
     overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* Barra de rolagem fosca */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-john);
+    background: var(--bg-sza);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--accent-red);
-    border-radius: 0px;
+    background: var(--accent-sage);
 }
 
 h1,
@@ -68,52 +67,50 @@ section {
 }
 
 .section-title {
-    font-size: clamp(1.4rem, 3.5vw, 2.3rem);
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
     text-align: center;
     color: var(--text-light);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+    font-style: italic;
+    margin-bottom: 12px;
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--accent-red);
+    width: 45px;
+    height: 2px;
+    background: var(--accent-sage);
     margin: 15px auto 0 auto;
+    opacity: 0.6;
 }
 
 .section-subtitle {
     font-size: 0.95rem;
     text-align: center;
     color: var(--text-muted);
-    margin-bottom: 70px;
     max-width: 600px;
     margin: 0 auto 70px auto;
 }
 
-/* CARDS DETALHES FOSCOS */
-.john-card {
+/* CARDS ESTÉTICA ORGÂNICA */
+.sza-card {
     background: var(--bg-cards);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 6px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     transition: var(--transition-smooth);
 }
 
-.john-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent-red);
-    box-shadow: 0 15px 35px var(--accent-red-glow);
+.sza-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(143, 168, 139, 0.3);
+    box-shadow: 0 20px 40px var(--accent-sage-glow);
 }
 
-/* FOOTER UNDERGROUND */
+/* FOOTER */
 #footer {
-    background-color: #050506;
+    background-color: #0c100d;
     padding: 80px 10% 40px;
-    border-top: 1px solid rgba(193, 39, 45, 0.15);
     text-align: center;
 }
 
@@ -128,16 +125,16 @@ section {
 
 .footer-brand {
     font-family: var(--font-titles);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-style: italic;
     color: var(--text-light);
     display: flex;
     align-items: center;
     gap: 12px;
-    letter-spacing: 2px;
 }
 
 .footer-brand i {
-    color: var(--accent-red);
+    color: var(--accent-sage);
 }
 
 .footer-text {
@@ -152,32 +149,30 @@ section {
 }
 
 .footer-socials a {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: 50%;
     background: var(--bg-cards);
     color: var(--text-light);
-    border: 1px solid rgba(255, 255, 255, 0.02);
     transition: var(--transition-smooth);
 }
 
 .footer-socials a:hover {
-    background: var(--accent-red);
-    color: #fff;
+    background: var(--accent-sage);
+    color: var(--bg-sza);
     transform: translateY(-3px);
 }
 
 .footer-copyright {
     font-size: 0.75rem;
     color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
-/* ================= CRÍTICAS ================= */
+/* ================= CARDS CONCEITO & CRÍTICA ================= */
 .critica-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -186,26 +181,24 @@ section {
 
 .critica-card {
     background-color: var(--bg-cards);
-    padding: 35px;
-    border-radius: 24px;
+    padding: 30px;
+    border-radius: 25px;
     transition: var(--transition-smooth);
-    border: 1px solid rgba(255, 34, 0, 0.07);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    border: 1px solid rgba(188, 138, 95, 0.1);
 }
 
 .critica-card:hover {
     transform: translateY(-6px);
-    border-color: var(--accent-pabllo);
-    box-shadow: 0 15px 40px rgba(255, 34, 0, 0.12);
+    border-color: var(--accent-emicida);
+    box-shadow: 0 15px 40px rgba(188, 138, 95, 0.08);
+    /* Brilho sutil no card de crítica */
 }
 
 .critica-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 4px;
+    margin-bottom: 20px;
 }
 
 .critica-logo {
@@ -215,28 +208,31 @@ section {
 }
 
 .nota {
-    font-weight: 700;
-    color: var(--accent-secondary);
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    font-weight: bold;
+    color: var(--accent-emicida);
+    font-size: 0.9rem;
 }
 
 .critica-texto {
     font-size: 0.95rem;
     color: var(--color-gray);
-    line-height: 1.75;
-    font-style: italic;
-    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.critico-nome {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: bold;
 }
 
 /* Destacar o artista selecionado na barra lateral */
 .sidebar-link.active-artist {
-    color: #c1272d !important;
+    color: #8fa88b !important;
     /* Cor tom pastel/Sweetener da Ariana */
-    background-color: rgba(193, 39, 45, 0.2);
+    background-color: rgba(201, 127, 160, 0.1);
     /* Fundo sutil de destaque */
     font-weight: 700;
-    border-left: 3px solid #131315;
+    border-left: 3px solid #1a221c;
     /* Barrinha lateral indicativa */
     padding-left: 17px;
     /* Ajuste sutil por conta da borda */

@@ -189,3 +189,16 @@ section {
     opacity: 1;
     transform: translate(0);
 }
+
+/* Destacar o artista selecionado na barra lateral */
+.sidebar-link.active-artist {
+    color: #ff2a4b !important;
+    /* Cor tom pastel/Sweetener da Ariana */
+    background-color: rgba(1, 0, 1, 0.1);
+    /* Fundo sutil de destaque */
+    font-weight: 700;
+    border-left: 3px solid #0f0f11;
+    /* Barrinha lateral indicativa */
+    padding-left: 17px;
+    /* Ajuste sutil por conta da borda */
+}

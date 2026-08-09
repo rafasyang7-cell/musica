@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZA | Ctrl</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/style/szastyle.css">
+    <link rel="stylesheet" href="src/style/szaheader.css">
+    <link rel="stylesheet" href="src/style/szahome.css">
+
+    <link rel="stylesheet" href="src/style/capastyle.css">
+    <link rel="stylesheet" href="src/style/capaheader.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="sza-theme">
+
+    <div id="blury_overlay"></div>
+
+    <aside id="sidebar_menu">
+        <div class="sidebar-header">
+            <h3>selecione um artista</h3>
+            <button id="close_sidebar" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="capa.html" class="sidebar-link back-to-home">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>voltar para o início</span>
+            </a>
+            <hr class="sidebar-divider" style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 5px 0;">
+
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-cloud"></i> Ariana Grande</a>
+            <a href="nanda.html" class="sidebar-link"><i class="fa-solid fa-bolt"></i> NandaTsunami</a>
+            <a href="emicida.html" class="sidebar-link"><i class="fa-solid fa-hand-fist"></i> Emicida</a>
+            <a href="pabllo.html" class="sidebar-link"><i class="fa-solid fa-sun"></i> Pabllo Vittar</a>
+            <a href="zimbra.html" class="sidebar-link"><i class="fa-solid fa-mountain-sun"></i> Zimbra</a>
+            <a href="tasha.html" class="sidebar-link"><i class="fa-solid fa-gem"></i> Tasha & Tracie</a>
+            <a href="urias.html" class="sidebar-link"><i class="fa-solid fa-mask"></i> Urias</a>
+            <a href="harry.html" class="sidebar-link"><i class="fa-solid fa-water"></i> Harry Styles</a>
+            <a href="gorillaz.html" class="sidebar-link"><i class="fa-solid fa-ship"></i> Gorillaz</a>
+            <a href="john.html" class="sidebar-link"><i class="fa-solid fa-crosshairs"></i> John</a>
+            <a href="sza.html" class="sidebar-link active-artist"><i class="fa-solid fa-seedling"></i> SZA</a>
+        </nav>
+    </aside>
+
+    <header>
+        <nav id="navbar">
+            <div id="toggle_container">
+                <button id="sidebar_btn" aria-label="Abrir menu de artistas">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>conhecer novos artistas</span>
+                </button>
+                <i class="fa-solid fa-arrow-left arrow-indicator"></i>
+            </div>
+
+            <div class="logo-center">
+                <i class="fa-solid fa-seedling animated-icon"></i>
+                <span class="brand-text">Discografias</span>
+            </div>
+
+            <div id="nav_list_container">
+                <ul id="nav_list">
+                    <li class="nav-item active"><a href="#home">álbum</a></li>
+                    <li class="nav-item"><a href="#menu">produção</a></li>
+                    <li class="nav-item"><a href="#menu2">veredito</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile_btn" aria-label="Abrir seções" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu" role="menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">álbum</a></li>
+                <li class="nav-item"><a href="#menu">produção</a></li>
+                <li class="nav-item"><a href="#menu2">veredito</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div id="cta">
+                <h1 class="title">Ctrl</h1>
+                <p class="description">
+                    Um mergulho confessional, cru e perfeitamente honesto sobre a juventude, inseguranças e
+                    relacionamentos modernos. Em "Ctrl", SZA tece melodias íntimas envolventes sobre uma produção
+                    minimalista para falar sobre a busca pelo controle em um mundo analógico e caótico.
+                </p>
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-more">Explorar a era</a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <div class="album-wrapper crt-effect">
+                    <a href="https://open.spotify.com/album/762906Xg6V67Jy7Zg67gA3" target="_blank" rel="noopener"
+                        title="Ouvir no Spotify">
+                        <img src="src/images/tv.jpg" alt="Capa do álbum Ctrl da SZA">
+                        <div class="spotify-overlay">
+                            <i class="fa-brands fa-spotify"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">A Estética Analógica</h2>
+            <h3 class="section-subtitle">Por dentro das texturas vintage, guitarras indie e desabafos.
+            </h3>
+
+            <div class="menu-container">
+                <div class="menu-item sza-card">
+                    <img src="src/images/bore.jpg" alt="Guitarras Minimalistas" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Esconderam da artista</h4>
+                        <p class="card-item-description">
+                            SZA sofria de tanta ansiedade e indecisão que não conseguia parar de mexer nas faixas. Para
+                            que o álbum finalmente saísse, os executivos da gravadora (Top Dawg Entertainment)
+                            confiscaram o HD com as gravações das mãos dela.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item sza-card">
+                    <img src="src/images/vinil.webp" alt="Lirismo Sem Filtros" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">Conselhos maternos</h4>
+                        <p class="card-item-description">
+                            Os áudios falados que abrem e fecham várias músicas do álbum (como em Supermodel e 20
+                            Something) são mensagens reais da mãe de SZA, Audrey Rowe. Os conselhos maternos serviram
+                            como o fio condutor conceitual do disco.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item sza-card">
+                    <img src="src/images/verde.jpg" alt="Elementos Eletrônicos" class="menu-img">
+                    <div class="menu-details">
+                        <h4 class="card-item-title">O segredo de "The Weekend"</h4>
+                        <p class="card-item-description">
+                            Apesar de soar como um hino de empoderamento sensual, SZA revelou que a música é sob a
+                            perspectiva de uma mulher que divide um homem com outras três pessoas, abordando a poligamia
+                            e os papéis nos relacionamentos modernos de forma crua.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu2">
+            <h2 class="section-title scroll-animate from-bottom">O Veredito do Diário</h2>
+            <h3 class="section-subtitle scroll-animate from-bottom">Como o neo-soul revolucionário e vulnerável da SZA
+                desarmou os especialistas.
+            </h3>
+
+            <div class="critica-grid">
+                <div class="critica-card sza-card">
+                    <div class="critica-header">
+                        <img src="src/images/pitchfork-wordmark-new.png" alt="Pitchfork" class="critica-logo">
+
+                        <span class="critico-nome">Pitchfork</span>
+                        <span class="nota">8.4/10</span>
+                    </div>
+                    <p class="critica-texto">
+                        "O tão aguardado álbum de estreia da cantora de Nova Jersey é um disco de R&B opulento e cru que
+                        constantemente testa os limites do gênero. A perspectiva profundamente pessoal de SZA sobre o
+                        romance moderno dá vida infinita a essas canções."
+                    </p>
+                </div>
+
+                <div class="critica-card sza-card">
+                    <div class="critica-header">
+                        <img src="src/images/rolling-stone-logo.png" alt="rolling-stone" class="critica-logo">
+                        <span class="critico-nome">Rolling Stone</span>
+                        <span class="nota">★★★★★</span>
+                    </div>
+                    <p class="critica-texto">
+                        "O som de SZA foi rotulado pela imprensa como 'R&B de quarto' — obscuro, inebriante, oblíquo —,
+                        mas Ctrl é tudo menos isso. O som é polimórfico, mas mais forte e menos filtrado... É o tipo de
+                        álbum que joga linhas de forma casual." (O veículo também incluiu o disco na lista dos 500
+                        Melhores Álbuns de Todos os Tempos).
+                    </p>
+                </div>
+
+                <div class="critica-card sza-card">
+                    <div class="critica-header">
+                        <img src="src/images/crack.png" alt="Crack Magazine" class="critica-logo">
+
+                        <span class="critico-nome">Crack Magazine</span>
+                        <span class="nota">★★★★☆</span>
+                    </div>
+                    <p class="critica-texto">
+                        "Liricamente, as músicas parecem uma coleção de memórias românticas profundamente pessoais...
+                        Ctrl nem sempre é sobre vencer, bem longe disso, mas é essa honestidade pura que ajudou a coroar
+                        SZA como a rainha reinante de sua própria verdade."
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fa-solid fa-seedling"></i>
+                <span>Discografias</span>
+            </div>
+            <p class="footer-text">
+                "That's my secret, all of it is yours."
+                <br>
+                Projeto desenvolvido unindo design fluído e paletas orgânicas.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/rafasyang7-cell" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:rafasyang7@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 — Desenvolvido por <strong>Rafaela Syang</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/szascript.js"></script>
+    <script src="src/javascript/capa.js"></script>
+</body>
+
+</html>
